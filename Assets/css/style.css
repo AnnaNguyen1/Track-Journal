@@ -1,0 +1,47 @@
+:root {
+    --header-background: green;
+    --light-text: #ffffff;
+    --poppins: 'Poppins', sans-serif;
+    --sans: 'Open Sans', sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    font-size: 62.5%; 
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-image: url("../images/walkingtrack.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: var(--light-text);
+    font-family: var(--poppins);
+    padding: 3rem;
+}
+
+.title {
+    font-size: 3rem;
+}
+
+.subtitle,
+.header-list {
+    font-size: 2rem;
+}
+
+.header-list {
+    display: inline-flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+li {
+    padding: 1.5rem;
+}
+
