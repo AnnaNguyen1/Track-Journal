@@ -1,17 +1,17 @@
 :root {
-    --header-background: green;
-    --light-text: #ffffff;
-    --poppins: 'Poppins', sans-serif;
-    --sans: 'Open Sans', sans-serif;
+  --header-background: green;
+  --light-text: #ffffff;
+  --poppins: "Poppins", sans-serif;
+  --sans: "Open Sans", sans-serif;
 }
 
 * {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 html {
-    font-size: 62.5%; 
+  font-size: 62.5%;
 }
 
 nav {
@@ -27,23 +27,59 @@ nav {
 }
 
 .title {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
 .subtitle,
 .header-list {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .header-list {
-    display: inline-flex;
-    justify-content: space-evenly;
-    list-style: none;
+  display: inline-flex;
+  justify-content: space-evenly;
+  list-style: none;
 }
 
 li {
-    padding: 1.5rem;
+  padding: 1.5rem;
 }
+/*styling for page 4* starts here*/
+.btn-container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+#all-activities,
+#easy,
+#moderate,
+#difficulty,
+#edit {
+  padding: 0.5rem;
+  margin: 2rem;
+  font-size: 2rem;
+  font-family: var(--sans);
+  border-radius: 1rem;
+  border: 3px solid rgb(87, 73, 73);
+  box-shadow: 0.5rem 0.5rem 1rem rgb(87, 73, 73);
+  background-color: rgb(87, 73, 73, 0.2);
+}
+.activities-container {
+  display: flex;
+  margin: 2rem;
+  padding: 1rem;
+  border: 0.2rem solid black;
+}
+.activities-container p {
+  margin: 1.5rem;
+  font-size: 2rem;
+  font-family: var(--sans);
+}
+textarea {
+  margin: 1.5rem;
+  font-family: var(--sans);
+}
+
 
 #results-main {
     margin: 0 15rem;
@@ -109,3 +145,15 @@ li {
    right: 5%;
    bottom: 10%; 
 }
+
+.edit-button {
+  position: absolute;
+  left: 85%;
+  bottom: 15%;
+}
+.pace-level {
+  position: absolute;
+  left: 85%;
+  top: 40%;
+}
+
