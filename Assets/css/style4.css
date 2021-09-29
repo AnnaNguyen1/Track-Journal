@@ -44,7 +44,6 @@ nav {
 li {
   padding: 1.5rem;
 }
-/*styling for page 4* starts here*/
 .btn-container {
   display: inline-flex;
   flex-wrap: wrap;
@@ -90,4 +89,3 @@ textarea {
   left: 85%;
   top: 40%;
 }
-/*styling for page 4 ends here */
