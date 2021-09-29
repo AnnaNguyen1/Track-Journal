@@ -1,47 +1,115 @@
 :root {
-    --header-background: green;
-    --light-text: #ffffff;
-    --poppins: 'Poppins', sans-serif;
-    --sans: 'Open Sans', sans-serif;
+  --header-background: green;
+  --light-text: #ffffff;
+  --poppins: "Poppins", sans-serif;
+  --sans: "Open Sans", sans-serif;
 }
 
 * {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 html {
-    font-size: 62.5%; 
+  font-size: 62.5%;
 }
 
 nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background-image: url("../images/walkingtrack.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    color: var(--light-text);
-    font-family: var(--poppins);
-    padding: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-image: url("../images/Walk.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: var(--light-text);
+  font-family: var(--poppins);
+  padding: 3rem;
 }
 
+body {
+  text-align: center;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 32px;
+}
 .title {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
 .subtitle,
 .header-list {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .header-list {
-    display: inline-flex;
-    justify-content: space-evenly;
-    list-style: none;
+  display: inline-flex;
+  justify-content: space-evenly;
+  list-style: none;
 }
 
 li {
-    padding: 1.5rem;
+  padding: 1.5rem;
 }
 
+li a {
+  color: darkblue;
+  font-weight: bold;
+}
+
+.Log-form,
+.form-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.Log-form {
+  justify-content: centre;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+  background-image: url("../images/capture.JPG");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+form {
+  margin-bottom: 80px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+input,
+select {
+  padding: 10px;
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+option {
+  background: silver;
+}
+.form-info {
+  background-color: #f2f2f2;
+
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.form-info button {
+  width: 100px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.difficulty-inline {
+  display: inline-block;
+}
