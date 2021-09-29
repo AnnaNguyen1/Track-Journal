@@ -26,6 +26,14 @@ nav {
     padding: 6rem;
 }
 
+body {
+  text-align: center;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 32px;
+}
 .title {
   font-size: 3rem;
 }
@@ -44,12 +52,75 @@ nav {
 li {
   padding: 1.5rem;
 }
+
+li a {
+  color: darkblue;
+  font-weight: bold;
+}
+
+.Log-form,
+.form-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.Log-form {
+  justify-content: centre;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+  background-image: url("../images/capture.JPG");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+form {
+  margin-bottom: 80px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+input,
+select {
+  padding: 10px;
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+option {
+  background: silver;
+}
+.form-info {
+  background-color: #f2f2f2;
+
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.form-info button {
+  width: 100px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.difficulty-inline {
+  display: inline-block;
+}
+
 /*styling for page 4* starts here*/
 .btn-container {
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+
 #all-activities,
 #easy,
 #moderate,
@@ -64,17 +135,20 @@ li {
   box-shadow: 0.5rem 0.5rem 1rem rgb(87, 73, 73);
   background-color: rgb(87, 73, 73, 0.2);
 }
+
 .activities-container {
   display: flex;
   margin: 2rem;
   padding: 1rem;
   border: 0.2rem solid black;
 }
+
 .activities-container p {
   margin: 1.5rem;
   font-size: 2rem;
   font-family: var(--sans);
 }
+
 textarea {
   margin: 1.5rem;
   font-family: var(--sans);
@@ -151,9 +225,9 @@ textarea {
   left: 85%;
   bottom: 15%;
 }
+
 .pace-level {
   position: absolute;
   left: 85%;
   top: 40%;
 }
-
