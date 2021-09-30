@@ -1,44 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Track Journal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Assets/css/style.css" />
+    <link rel="homepage stylesheet" href="./Assets/css/homepagestyle.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Track Journal</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@200&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="Assets/css/style.css" />
-  <link rel="homepage stylesheet" href="./Assets/css/homepagestyle.css">
-</head>
-
-<header>
-  <nav>
-    <h1 class="title">TRACKING JOURNAL <br><p class="subtitle">Find a track and track your activity!</p></h1>
-    <ul class="header-list">
-      <li>Log Activity</li>
-      <li>View Past Activities</li>
-    </ul>
-  </nav>
-</header>
-<body>
+  <header>
+    <nav>
+      <h1 class="title">
+        TRACKING JOURNAL <br />
+        <p class="subtitle">Find a track and track your activity!</p>
+      </h1>
+      <ul class="header-list">
+        <li>Log Activity</li>
+        <li>View Past Activities</li>
+      </ul>
+    </nav>
+  </header>
+  <body>
     <main>
+      
       <h1 id="quote">"Everday may not be good... but there's something good in Everday"</h1>
       <h3 id="author">~unknown</h3>
       <form class='userForm'>
+        
         <h2>Start Your Journal</h2>
         <div class="userInput">
           <a>Enter Current Address</a>
-          <input id="userLocation" placeholder="e.g 123 Smith Street, Suburb " aria-label="Search">
+          <input
+            id="userLocation"
+            placeholder="e.g 123 Smith Street, Suburb "
+            aria-label="Search"
+          />
           <a>Search Radius</a>
-          <input id="userRadius" placeholder="e.g 5km" aria-label="Search">
-      </div>
+          <input
+            id="userRadius"
+            type="number"
+            placeholder="e.g 5km"
+            aria-label="Search"
+          />
+        </div>
         <button id="searchBtn">Search</button>
-    </form> 
-
+      </form>
     </main>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5VJt7YAIL8Ftw1lC8bHtB_AnF0eyCDtw&libraries=places&callback=initAutocomplete"
+      async
+      defer
+    ></script>
     <script src="Assets/js/script.js"></script>
-</body>
-
-
+  </body>
+</html>
