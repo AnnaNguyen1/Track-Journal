@@ -15,15 +15,15 @@ html {
 }
 
 nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background-image: url("../images/walkingtrack.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    color: var(--light-text);
-    font-family: var(--poppins);
-    padding: 6rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-image: url("../images/walkingtrack.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: var(--light-text);
+  font-family: var(--poppins);
+  padding: 6rem;
 }
 
 .title {
@@ -44,11 +44,12 @@ nav {
 li {
   padding: 1.5rem;
 }
-/*styling for page 4* starts here*/
+
 .btn-container {
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  
 }
 #all-activities,
 #easy,
@@ -68,7 +69,10 @@ li {
   display: flex;
   margin: 2rem;
   padding: 1rem;
-  border: 0.2rem solid black;
+  border-radius: 1rem;
+  border: 3px solid rgb(87, 73, 73);
+  box-shadow: 0.5rem 0.5rem 1rem rgb(87, 73, 73);
+  background-color: rgb(87, 73, 73, 0.2);
 }
 .activities-container p {
   margin: 1.5rem;
@@ -80,80 +84,77 @@ textarea {
   font-family: var(--sans);
 }
 
-
 #results-main {
-    margin: 0 15rem;
+  margin: 0 15rem;
 }
 
 .header-weather-container {
-    margin-top: 5rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 0 4rem;
-    font-family: var(--poppins);
-    font-size: 1.5rem;
+  margin-top: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 4rem;
+  font-family: var(--poppins);
+  font-size: 1.5rem;
 }
 
 .btn {
-    font-family: var(--sans);
-    font-size: 2rem;
-    padding: .5rem 2rem;
+  font-family: var(--sans);
+  font-size: 2rem;
+  padding: 0.5rem 2rem;
 }
 
 .brown-border {
-    border-radius: 1rem;
-    border: 3px solid rgb(87, 73, 73);
-    box-shadow: .5rem .5rem 1rem rgb(87, 73, 73);
-    background-color: rgb(87, 73, 73, 0.2);
+  border-radius: 1rem;
+  border: 3px solid rgb(87, 73, 73);
+  box-shadow: 0.5rem 0.5rem 1rem rgb(87, 73, 73);
+  background-color: rgb(87, 73, 73, 0.2);
 }
 
 .home-page {
-    border: none;
-    background-color: white;
-    font-family: var(--poppins);
-    font-size: 1.5rem;;
-    font-weight: bold;
+  border: none;
+  background-color: white;
+  font-family: var(--poppins);
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .results-container {
-    margin: 4rem 4rem;
-    display: none;
-    font-family: var(--sans);
-    font-size: 2rem;
-    height: 34rem;
-    position: relative;
-
+  margin: 4rem 4rem;
+  display: none;
+  font-family: var(--sans);
+  font-size: 2rem;
+  height: 34rem;
+  position: relative;
 }
 
 .results-card,
 .map-result {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    margin: 0 1rem;
-    margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 1rem;
+  margin-top: 1rem;
 }
 
 .results-details {
-    padding-left: 1rem;
-    line-height: 5rem;
+  padding-left: 1rem;
+  line-height: 5rem;
 }
 
 .button-container {
-   position: absolute;
-   right: 5%;
-   bottom: 10%; 
+  position: absolute;
+  right: 5%;
+  bottom: 10%;
 }
 
 .edit-button {
   position: absolute;
   left: 85%;
-  bottom: 15%;
+  bottom: 5%;
 }
 .pace-level {
   position: absolute;
   left: 85%;
-  top: 40%;
+  top: 50%;
 }
-
