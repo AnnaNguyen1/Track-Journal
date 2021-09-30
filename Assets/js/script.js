@@ -2,7 +2,7 @@ var autocompleteDiv = document.querySelector("#userLocation");
 var submitAddressSearch = document.querySelector("#searchBtn");
 var quote = document.querySelector("#quote");
 var quoteAuthor = document.querySelector("#author");
-var radiusInputVal = document.querySelector("#userRadius").value;
+var radiusInputVal = document.querySelector("#userRadius");
 
 var lat = "";
 var lng = "";
@@ -27,9 +27,9 @@ function initAutocomplete() {
 
 function handleAddressSearch(event) {
   event.preventDefault();
-
+  console.log("test");
   var queryString = "./results.html?q=" + "lat=" + lat + "&lng=" + lng;
-
+  radiusInputVal = radiusInputVal.value;
   if (radiusInputVal) {
     queryString += "&userRadius=" + radiusInputVal;
   }
