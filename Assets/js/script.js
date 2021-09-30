@@ -1,11 +1,29 @@
+var quote = document.querySelector('#quote');
+var quoteAuthor = document.querySelector('#author');
 var autocompleteDiv = document.querySelector("#userLocation");
 var submitAddressSearch = document.querySelector("#searchBtn");
-var quote = document.querySelector("#quote");
-var quoteAuthor = document.querySelector("#author");
 var radiusInputVal = document.querySelector("#userRadius");
 
 var lat = "";
 var lng = "";
+
+
+function getQuote() {
+    fetch("https://type.fit/api/quotes")
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(data) {
+    console.log(data);
+    var randomI = Math.floor(Math.random() * data.length);
+    console.log(randomI);
+    var displayQuote = data[randomI].text;
+    var displayAuthor = data[randomI].author;
+    quoteAuthor.textContent = displayAuthor;
+    quote.textContent = displayQuote;
+  });
+} 
+getQuote()
 
 function initAutocomplete() {
   let autocomplete = new google.maps.places.Autocomplete(autocompleteDiv, {
