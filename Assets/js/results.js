@@ -28,9 +28,7 @@ function getParams() {
   displayAddress(lat, lng);
   //calling the function to display current weather
   getWeather(lat, lng);
-
 }
-
 
 function searchApi(lat, lng, radius) {
   var types = "park";
@@ -102,7 +100,6 @@ function renderResults(searchResults) {
     console.log(nameLocation, addressLocation, ratingOfLocation);
     console.log(nameLocationUrl);
 
-
     var resultCard = `
     <div class="results-card" data-location="${latLocation}&${lngLocation}">
       <div class="map-result">
@@ -119,7 +116,7 @@ function renderResults(searchResults) {
     </div> `;
 
     console.log(resultCard);
-    resultsContainer.innerHTML = resultCard;
+    resultsContainer.innerHTML += resultCard;
   }
   // function handleLogActivityPage(event) {
   //   event.preventDefault();
@@ -130,8 +127,8 @@ function renderResults(searchResults) {
   // }
 
   // logActivityBtn.addEventListener("click", handleLogActivityPage);
-//     location.assign(queryString);
-// };
+  //     location.assign(queryString);
+  // };
 }
 
 //function to get weather using openweather api and displaying it to the page
@@ -190,7 +187,6 @@ function getWeather(lat, lng) {
       // console.log(windspeed);
       // console.log(iconurl);
     });
-
 }
 
 function homePage(event) {
