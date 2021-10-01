@@ -1,84 +1,88 @@
 :root {
-    --header-background: green;
-    --light-text: #ffffff;
-    --poppins: 'Poppins', sans-serif;
-    --sans: 'Open Sans', sans-serif;
+  --header-background: green;
+  --light-text: #ffffff;
+  --poppins: "Poppins", sans-serif;
+  --sans: "Open Sans", sans-serif;
 }
 body {
-    width: 100%;
-    background-image: url(../images/walking.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+  width: 100%;
+  background-image: url(../images/walking.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 nav {
-    background-image: none;
+  background-image: none;
 }
 main {
-    color: var(--light-text);
+  color: var(--light-text);
 }
 #quote {
-    margin-top: 150px;
-    text-align: center;
-    font-size: 7rem;
-    font-family: 'Sacramento', cursive;
+  margin-top: 150px;
+  text-align: center;
+  font-size: 7rem;
+  font-family: "Sacramento", cursive;
 }
 h3 {
-    text-align: center;
-    font-family:var(--poppins);
-    font-size: 2rem;
-    font-style: italic;
+  text-align: center;
+  font-family: var(--poppins);
+  font-size: 2rem;
+  font-style: italic;
 }
 form h2 {
-    text-align: center;
-    font-family: 'Sacramento', cursive;
+  text-align: center;
+  font-family: "Sacramento", cursive;
 }
 
 .userForm {
-    font-family: var(--poppins);
-    font-size: 3rem;
-    color: var(--light-text);
-    font-weight: bold;
-    margin-top: 200px;
-    margin-left: 50px;
-    margin-bottom: 20px;
-    width: 40%;
-    background-image: url(../images/journal.jpg);
-    background-size: 100%;
-    background-origin: border-box;
-    background-position:top;
-    border-radius: 15px;
-    box-shadow: 0px 0px 10px var(--light-text);
-    padding: 10px;
-    opacity: 90%;
+  font-family: var(--poppins);
+  font-size: 3rem;
+  color: var(--light-text);
+  font-weight: bold;
+  margin-top: 200px;
+  margin-left: 50px;
+  margin-bottom: 20px;
+  width: 40%;
+  background-image: url(../images/journal.jpg);
+  background-size: 100%;
+  background-origin: border-box;
+  background-position: top;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px var(--light-text);
+  padding: 10px;
+  opacity: 90%;
 }
-.userInput{
-    display: flex;
-    flex-direction: column;
-    width: max-content;
-    margin-left: 2rem;
-    margin-top: 2rem;
+.userInput {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  margin-left: 2rem;
+  margin-top: 2rem;
 }
 #searchBtn {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 3rem;
-    padding: 5px 20px 5px 20px;
-    width: max-content;
-    border-radius: 15px;
-    border: solid var(--light-text);
-    color: var(--light-text);
-    background-color: rgb(167, 131, 86);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 3rem;
+  padding: 5px 20px 5px 20px;
+  width: max-content;
+  border-radius: 15px;
+  border: solid var(--light-text);
+  color: var(--light-text);
+  background-color: rgb(167, 131, 86);
 }
-#userLocation, #userRadius {
-    padding: 5px 0 5px 5px;
-    border-radius: 5px;
-    border: solid var(--light-text);
+#userLocation,
+#userRadius {
+  padding: 5px 0 5px 5px;
+  border-radius: 5px;
+  border: solid var(--light-text);
 }
 #userRadius {
-    width: min-content;
+  width: min-content;
 }
 #searchBtn:hover {
-    cursor: pointer;
-    box-shadow: 0px 0px 10px var(--light-text);
+  cursor: pointer;
+  box-shadow: 0px 0px 10px var(--light-text);
+}
+li a {
+  color: var(--light-text);
 }

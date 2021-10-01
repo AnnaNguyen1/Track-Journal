@@ -54,8 +54,7 @@ li {
 }
 
 li a {
-  color: darkblue;
-  font-weight: bold;
+  color: var(--light-text);
 }
 
 .Log-form,
@@ -114,7 +113,6 @@ form {
   display: inline-block;
 }
 
-/*styling for page 4* starts here*/
 .btn-container {
   display: inline-flex;
   flex-wrap: wrap;
