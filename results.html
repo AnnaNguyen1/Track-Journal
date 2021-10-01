@@ -1,51 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Track Journal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Assets/css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Track Journal</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@200&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="Assets/css/style.css" />
-</head>
+  <header>
+    <nav>
+      <h1 class="title">
+        TRACKING JOURNAL <br />
+        <p class="subtitle">Find a track and track your activity!</p>
+      </h1>
+      <ul class="header-list">
+        <li>Log Activity</li>
+        <li>View Past Activities</li>
+      </ul>
+    </nav>
+  </header>
 
-<header>
-  <nav>
-    <h1 class="title">TRACKING JOURNAL <br><p class="subtitle">Find a track and track your activity!</p></h1>
-    <ul class="header-list">
-      <li>Log Activity</li>
-      <li>View Past Activities</li>
-    </ul>
-  </nav>
-
-</header>
-
-<body>
+  <body>
     <main id="results-main">
-      <section class= "header-weather-container">
-        <h2>Search results for<br><p class="search-address">Address:</p><p class="search-again"><button type="button" class="home-page btn brown-border">Search Again</button></p></h2>
+      <section class="header-weather-container">
+        <h2>
+          Search results for<br />
+          <p class="search-address">
+            Address: <span id="address-searched"></span>
+          </p>
+          <p class="search-again">
+            <button type="button" class="home-page btn brown-border">
+              Search Again
+            </button>
+          </p>
+        </h2>
         <h2 class="weather">Weather: <span id="weather-result"></span></h2>
       </section>
 
       <!-- Container for the results to append to -->
-      <section class= "results-container brown-border">
-        <!-- To append per result -->
-        <!-- <div class="results-card">
-          <div class="map-result">
-            <img src="https://potionwebstudio.com/wp-content/uploads/2018/10/google-map3-1080x630.jpg" alt="map" width="400" height="300">
-            <div class="results-details">
-              <p>Name: <span id="name-result"></span></p>
-              <p>Address: <span id="address-result"></span></p>
-              <p>Google Rating: <span id="rating-result"></span></p>
-            </div>
-          </div>
-          <div class="button-container">
-            <button type="button" class="log-activity btn brown-border">Log Activity</button>
-          </div>
-        </div> -->
-      </section>
+      <section class="results-container brown-border"></section>
     </main>
     <script src="Assets/js/results.js"></script>
-</body>
+  </body>
+</html>
