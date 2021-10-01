@@ -97,8 +97,6 @@ function renderResults(searchResults) {
     var ratingOfLocation = searchResults.results[i].rating;
     var latLocation = searchResults.results[i].geometry.location.lat;
     var lngLocation = searchResults.results[i].geometry.location.lng;
-    console.log(nameLocation, addressLocation, ratingOfLocation);
-    console.log(nameLocationUrl);
 
     var resultCard = `
     <div class="results-card" data-location="${latLocation}&${lngLocation}">
@@ -115,20 +113,8 @@ function renderResults(searchResults) {
       </div>
     </div> `;
 
-    console.log(resultCard);
     resultsContainer.innerHTML += resultCard;
   }
-  // function handleLogActivityPage(event) {
-  //   event.preventDefault();
-
-  //   var queryString = "./logactivity.html";
-
-  //   location.assign(queryString);
-  // }
-
-  // logActivityBtn.addEventListener("click", handleLogActivityPage);
-  //     location.assign(queryString);
-  // };
 }
 
 //function to get weather using openweather api and displaying it to the page
@@ -196,6 +182,21 @@ function homePage(event) {
 
   location.assign(queryString);
 }
+
+function handleLogActivityPage(event) {
+  event.preventDefault();
+  console.log("test");
+
+  var queryString = "./logactivity.html";
+
+  location.assign(queryString);
+}
+
+resultsContainer.addEventListener(
+  "click",
+  logActivityBtn,
+  handleLogActivityPage
+);
 
 searchAgain.addEventListener("click", homePage);
 getParams();
