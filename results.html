@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@200&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="Assets/css/style.css" />
   </head>
 
@@ -25,13 +26,15 @@
       </ul>
     </nav>
   </header>
-
+  
   <body>
     <main id="results-main">
       <section class="header-weather-container">
         <h2>
           Search results for<br />
-          <p class="search-address">Address:</p>
+          <p class="search-address">
+            Address: <span id="address-searched"></span>
+          </p>
           <p class="search-again">
             <button type="button" class="home-page btn brown-border">
               Search Again
@@ -42,23 +45,11 @@
       </section>
 
       <!-- Container for the results to append to -->
-      <section class="results-container brown-border">
-        <!-- To append per result -->
-        <!-- <div class="results-card">
-          <div class="map-result">
-            <img src="https://potionwebstudio.com/wp-content/uploads/2018/10/google-map3-1080x630.jpg" alt="map" width="400" height="300">
-            <div class="results-details">
-              <p>Name: <span id="name-result"></span></p>
-              <p>Address: <span id="address-result"></span></p>
-              <p>Google Rating: <span id="rating-result"></span></p>
-            </div>
-          </div>
-          <div class="button-container">
-            <button type="button" class="log-activity btn brown-border">Log Activity</button>
-          </div>
-        </div> -->
-      </section>
+      <section class="results-container brown-border"></section>
     </main>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
     <script src="Assets/js/results.js"></script>
   </body>
 </html>
