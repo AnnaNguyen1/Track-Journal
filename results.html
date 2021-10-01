@@ -1,36 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Track Journal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+    ></script>
+    <link rel="stylesheet" href="Assets/css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Track Journal</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@200&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="Assets/css/style.css" />
-</head>
+  <header>
+    <nav>
+      <h1 class="title">
+        TRACKING JOURNAL <br />
+        <p class="subtitle">Find a track and track your activity!</p>
+      </h1>
+      <ul class="header-list">
+        <li>Log Activity</li>
+        <li>View Past Activities</li>
+      </ul>
+    </nav>
+  </header>
 
-<header>
-  <nav>
-    <h1 class="title">TRACKING JOURNAL <br><p class="subtitle">Find a track and track your activity!</p></h1>
-    <ul class="header-list">
-      <li>Log Activity</li>
-      <li>View Past Activities</li>
-    </ul>
-  </nav>
-
-</header>
-
-<body>
+  <body>
     <main id="results-main">
-      <section class= "header-weather-container">
-        <h2>Search results for<br><p class="search-address">Address:</p><p class="search-again"><button type="button" class="home-page btn brown-border">Search Again</button></p></h2>
+      <section class="header-weather-container">
+        <h2>
+          Search results for<br />
+          <p class="search-address">Address:</p>
+          <p class="search-again">
+            <button type="button" class="home-page btn brown-border">
+              Search Again
+            </button>
+          </p>
+        </h2>
         <h2 class="weather">Weather: <span id="weather-result"></span></h2>
       </section>
 
       <!-- Container for the results to append to -->
-      <section class= "results-container brown-border">
+      <section class="results-container brown-border">
         <!-- To append per result -->
         <!-- <div class="results-card">
           <div class="map-result">
@@ -48,4 +64,5 @@
       </section>
     </main>
     <script src="Assets/js/results.js"></script>
-</body>
+  </body>
+</html>
