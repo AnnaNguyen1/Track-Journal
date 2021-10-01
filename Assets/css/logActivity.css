@@ -1,0 +1,128 @@
+:root {
+    --header-background: green;
+    --light-text: #ffffff;
+    --poppins: "Poppins", sans-serif;
+    --sans: "Open Sans", sans-serif;
+}
+  
+* {
+    margin: 0px;
+    padding: 0px;
+}
+  
+html {
+    font-size: 62.5%;
+}
+  
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-image: url("../images/walkingtrack.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: var(--light-text);
+    font-family: var(--poppins);
+    padding: 6rem;
+}
+body {
+    width: 100%;
+    background-image: url(../images/walking.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+nav {
+    background-image: none;
+}
+main {
+    color: var(--light-text);
+}  
+h1 {
+    font-weight: 400;
+    font-size: 32px;
+}
+.title {
+    font-size: 3rem;
+}
+  
+.subtitle,
+.header-list {
+    font-size: 2rem;
+} 
+.header-list {
+    display: inline-flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+  
+li {
+    padding: 1.5rem;
+}
+  
+li a {
+    text-decoration: none;
+    color: var(--light-text);
+    font-weight: bold;
+}
+#logActivityTitle {
+    margin-left: 50px;
+    margin-bottom: 0px;
+    font-family: 'Sacramento', cursive;
+    font-size: 9rem;
+    color: var(--light-text);
+}
+.form-info {
+    margin-left: 50px;
+    background-image: url("../images/Walk.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 60%;
+    margin-bottom: 80px;
+    padding: 30px;   
+    font-family: var(--poppins);
+    color: var(--light-text);
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px var(--light-text);
+    opacity: 90%;
+}
+
+input,
+select {
+    padding: 10px;
+    width: 35%;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: solid var(--light-text);
+}  
+option {
+    background: silver;
+}
+#comment {
+    width: 60%;
+    border-radius: 10px;
+    padding: 20px;
+    font-family: var(--poppins);
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: solid var(--light-text);
+}
+.form-info button {
+
+    margin-right: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    width: 150px;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    border: solid var(--light-text);
+}
+.form-info button:hover {
+    box-shadow: 0px 0px 10px var(--light-text);
+}
