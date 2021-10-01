@@ -18,7 +18,7 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-image: url("../images/walkingtrack.jpg");
+  background-image: url("../images/walking.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   color: var(--light-text);
@@ -54,8 +54,7 @@ li {
 }
 
 li a {
-  color: darkblue;
-  font-weight: bold;
+  color: var(--light-text);
 }
 
 .Log-form,
@@ -114,7 +113,6 @@ form {
   display: inline-block;
 }
 
-/*styling for page 4* starts here*/
 .btn-container {
   display: inline-flex;
   flex-wrap: wrap;
@@ -166,12 +164,18 @@ textarea {
   padding: 0 4rem;
   font-family: var(--poppins);
   font-size: 1.5rem;
+  text-align: left;
+}
+
+#address-searched {
+  text-shadow: 0.2rem 0.1rem 0.2rem grey;
 }
 
 .btn {
   font-family: var(--sans);
   font-size: 2rem;
   padding: 0.5rem 2rem;
+  margin-top: 1rem;
 }
 
 .brown-border {
@@ -190,8 +194,11 @@ textarea {
 }
 
 .results-container {
+  margin-top: 3rem;
+}
+
+.results-card {
   margin: 4rem 4rem;
-  display: none;
   font-family: var(--sans);
   font-size: 2rem;
   height: 34rem;
@@ -210,6 +217,7 @@ textarea {
 .results-details {
   padding-left: 1rem;
   line-height: 5rem;
+  text-align: left;
 }
 
 .button-container {
