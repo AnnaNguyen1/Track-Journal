@@ -68,3 +68,18 @@ function checkOnlyOne(element) {
   })
   element.checked = true;
 }
+
+//Adding validation to radius
+function validateform(){
+var EnterAddress = document.startYourjournal.Address.value;
+var EnterRadius = document.startYourjournal.Radius.value;
+
+if (EnterAddress == null || EnterAddress=="") {
+  alert ("Address can't be blank");
+  return false;
+}
+else if(EnterRadius ==null || EnterRadius==""){
+  alert ("Please set radius!!");
+  return false;
+}
+}
