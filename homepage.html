@@ -35,25 +35,27 @@
       
       <h1 id="quote">"Everday may not be good... but there's something good in Everday"</h1>
       <h3 id="author">~unknown</h3>
-      <form class='userForm'>
+      <form name = "startYourjournal" class='userForm'>
         
         <h2>Start Your Journal</h2>
         <div class="userInput">
           <a>Enter Current Address</a>
           <input
+            name= "Address"
             id="userLocation"
             placeholder="e.g 123 Smith Street, Suburb "
             aria-label="Search"
           />
           <a>Search Radius</a>
           <input
+            name = "Radius"
             id="userRadius"
             type="number"
             placeholder="e.g 5km"
             aria-label="Search"
           />
         </div>
-        <button id="searchBtn">Search</button>
+        <button id="searchBtn" onclick="validateform()">Search</button>
       </form>
     </main>
     <script
