@@ -56,3 +56,15 @@ function handleAddressSearch(event) {
 }
 
 submitAddressSearch.addEventListener("click", handleAddressSearch);
+
+
+//Making only one selection to be selected
+
+function checkOnlyOne(element) {
+  const checkboxes = document.getElementsByName("difficulty");
+
+  checkboxes.forEach((cb) => {
+    cb.checked = false;
+  })
+  element.checked = true;
+}
