@@ -11,9 +11,6 @@
       rel="stylesheet"
     />
 
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
     <link rel="stylesheet" href="Assets/css/style.css" />
   </head>
 
@@ -24,12 +21,12 @@
         <p class="subtitle">Find a track and track your activity!</p>
       </h1>
       <ul class="header-list">
-        <li>Log Activity</li>
-        <li>View Past Activities</li>
+        <li><a href="logactivity.html">Log Activity</a></li>
+        <li><a href="pastactivities.html">View Past Activities</a></li>
       </ul>
     </nav>
   </header>
-
+  
   <body>
     <main id="results-main">
       <section class="header-weather-container">
@@ -50,6 +47,9 @@
       <!-- Container for the results to append to -->
       <section class="results-container brown-border"></section>
     </main>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
     <script src="Assets/js/results.js"></script>
   </body>
 </html>
