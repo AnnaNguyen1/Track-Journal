@@ -152,25 +152,9 @@ function getWeather(lat, lng) {
       temp.textContent = "Temperature: " + response.current.temp + "\u00B0C";
       currentWeather.appendChild(temp);
 
-      var humidity = document.createElement("p");
-      humidity.textContent = "Humidity: " + response.current.humidity + "%";
-      currentWeather.appendChild(humidity);
-
-      var uvIndex = document.createElement("p");
-      uvIndex.textContent = "UV Index: " + response.current.uvi;
-      currentWeather.appendChild(uvIndex);
-
-      var windspeed = document.createElement("p");
-      windspeed.textContent =
-        "Wind-Speed: " + response.current.wind_speed + " m/sec";
-      currentWeather.appendChild(windspeed);
-
       weatherUpdate.append(currentWeather);
       // console.log(date);
       // console.log(temp);
-      // console.log(humidity);
-      // console.log(uvIndex);
-      // console.log(windspeed);
       // console.log(iconurl);
     });
 }
