@@ -6,47 +6,47 @@
 }
 
 * {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
-  
+
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
-  
+
 nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background-image: url("../images/walkingtrack.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    color: var(--light-text);
-    font-family: var(--poppins);
-    padding: 6rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-image: url("../images/walkingtrack.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: var(--light-text);
+  font-family: var(--poppins);
+  padding: 6rem;
 }
 
 h1 {
-    font-weight: 400;
-    font-size: 32px;
+  font-weight: 400;
+  font-size: 32px;
 }
 .title {
-    font-size: 3rem;
+  font-size: 3rem;
 }
-  
+
 .subtitle,
 .header-list {
-    font-size: 2rem;
+  font-size: 2rem;
 }
-  
+
 .header-list {
-    display: inline-flex;
-    justify-content: space-evenly;
-    list-style: none;
+  display: inline-flex;
+  justify-content: space-evenly;
+  list-style: none;
 }
-  
-li {    
-    padding: 1.5rem;
+
+li {
+  padding: 1.5rem;
 }
 
 body {
@@ -63,7 +63,7 @@ main {
   color: var(--light-text);
 }
 #quote {
-  margin-top: 150px;
+  margin-top: 6rem;
   text-align: center;
   font-size: 7rem;
   font-family: "Sacramento", cursive;
@@ -84,12 +84,13 @@ form h2 {
   font-size: 3rem;
   color: var(--light-text);
   font-weight: bold;
-  margin-top: 200px;
+  margin-top: 100px;
   margin-left: 50px;
   margin-bottom: 20px;
   width: 40%;
-  background-image: url(../images/journal.jpg);
-  background-size: 100%;
+  /* background-image: url(../images/journal.jpg);
+  background-size: 100%; */
+  background-color: rgb(0, 0, 0, 0.6);
   background-origin: border-box;
   background-position: top;
   border-radius: 15px;
@@ -132,4 +133,3 @@ form h2 {
 li a {
   color: var(--light-text);
 }
-
