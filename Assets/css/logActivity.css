@@ -31,6 +31,7 @@ body {
     background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    color: var(--light-text);
 }
 nav {
     background-image: none;
@@ -59,32 +60,29 @@ h1 {
 li {
     padding: 1.5rem;
 }
-  
 li a {
-    text-decoration: none;
     color: var(--light-text);
-    font-weight: bold;
+    text-decoration: none;
 }
+
 #logActivityTitle {
-    margin-left: 50px;
+    margin-left: 100px;
     margin-bottom: 0px;
     font-family: 'Sacramento', cursive;
     font-size: 9rem;
     color: var(--light-text);
 }
 .form-info {
-    margin-left: 50px;
-    background-image: url("../images/Walk.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 60%;
-    margin-bottom: 80px;
+    margin-left: 100px;
+    background-color: rgb(0, 0, 0, 0.6);
+    background-origin: border-box;
+    width: 50%;
+    margin-bottom: 50px;
     padding: 30px;   
     font-family: var(--poppins);
     color: var(--light-text);
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.8rem;
     border-radius: 15px;
     box-shadow: 0px 0px 10px var(--light-text);
     opacity: 90%;
@@ -94,7 +92,7 @@ input,
 select {
     padding: 10px;
     width: 35%;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 20px;
     border-radius: 5px;
     border: solid var(--light-text);
@@ -117,7 +115,7 @@ option {
     margin-top: 10px;
     padding: 10px;
     width: 150px;
-    background-color: #4caf50;
+    background-color: rgb(167, 131, 86);
     color: white;
     border-radius: 5px;
     cursor: pointer;
