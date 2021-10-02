@@ -8,7 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@200&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="Assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet"/>
+  <!-- <link rel="stylesheet" href="Assets/css/style.css" /> -->
+  <link rel="stylesheet" href="Assets/css/logActivity.css"/>
 </head>
 
 <header>
@@ -23,12 +25,10 @@
 </header>
 
 <body>
-  <div class = "Log-form">
-    <h1>Log Your Activity</h1>
-    <br></br>
-    <main>
-    <section>
-      <form action = "./logactivity.html" method="get" class = "form-info">
+
+  
+  <h1 id="logActivityTitle">Log Your Activity</h1>
+      <form class = "form-info">
         <div class = "form-Name">
           <label for = "name"> <h2>Enter the name of track: </h2></label>
           <input type = "text" name ="name" id = "name">
@@ -38,18 +38,7 @@
           <input type = "date"  name = "activity-date" id="activity-date" min = "2020-01-01" max = "2022/12/31">
           <label for = "name"> <h2>Time Taken: </h2></label>
           <input type = "text" name = "time-taken" id = "time-taken">
-          <h2>Difficulty:</h2>
           <br>
-          <label class ="difficulty-inline">
-            <input type = 'checkbox' name = 'difficulty' value = "" onclick = 'checkOnlyOne(this)'> <h3>Easy</h3>
-            </label>
-            <label class ="difficulty-inline">
-              <input type = 'checkbox' name = 'difficulty' value = "" onclick = 'checkOnlyOne(this)'> <h3>Moderate</h3>  
-            </label>
-            <label class ="difficulty-inline">
-              <input type = 'checkbox'  name = 'difficulty' value = "" onclick = 'checkOnlyOne(this)'> <h3>Hard</h3> 
-            </label><br>
-            <br>
             <label class= "pace"> <h2>Pace:</h2> </label>
             <select name="pace" id="pace-select">
               <option value="">Please choose an option</option>
@@ -58,19 +47,23 @@
               <option value="Jog">Jog</option>
               <option value="Hike">Hike</option>
               <option value="Ride">Ride</option>
-          </select> <br>
+            </select>
+            <br>
+            <label class= "pace"><h2>Difficulty:</h2></label>
+            <select name="pace" id="difficulty-select">
+              <option value="">Please choose an option</option>
+              <option value="Easy">Easy</option>
+              <option value="Moderate">Moderate</option>
+              <option value="Hard">Hard</option>
+            </select>
+            <br>
           <label for = "comment"> <h2>How was your experience?</h2></label>
           <textarea id ="comment" name = "story" rows = "5" cols = "33"></textarea>
           <br>
-          <button type = "Save"" value = "Save">Save</button>
-          <button type = "Reset" value = "Reset">Reset</button>
-          </div>
-        </form>
-
-
-      
-    </section>
-    </main>
-    <script src="Assets/js/script.js"></script>
-    </div>
+          <button id="saveBtn" type = "Save" value = "Save">Save</button>
+          <button id="resetBtn" type = "Reset" value = "Reset">Reset</button>
+        </div>
+      </form>
+    
+    <script src="Assets/js/logActivity.js"></script>
 </body>
