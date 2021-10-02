@@ -56,3 +56,30 @@ function handleAddressSearch(event) {
 }
 
 submitAddressSearch.addEventListener("click", handleAddressSearch);
+
+
+//Making only one selection to be selected
+
+function checkOnlyOne(element) {
+  const checkboxes = document.getElementsByName("difficulty");
+
+  checkboxes.forEach((cb) => {
+    cb.checked = false;
+  })
+  element.checked = true;
+}
+
+//Adding validation to radius
+function validateform(){
+var EnterAddress = document.startYourjournal.Address.value;
+var EnterRadius = document.startYourjournal.Radius.value;
+
+if (EnterAddress == null || EnterAddress=="") {
+  alert ("Address can't be blank");
+  return false;
+}
+else if(EnterRadius ==null || EnterRadius==""){
+  alert ("Please set radius!!");
+  return false;
+}
+}
