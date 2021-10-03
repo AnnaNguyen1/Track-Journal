@@ -42,6 +42,7 @@ h1 {
 }
 .title {
   font-size: 3rem;
+  text-align: left;
 }
 
 .subtitle,
@@ -58,7 +59,8 @@ h1 {
 li {
   padding: 1.5rem;
 }
-li a {
+li a,
+.title a {
   color: var(--light-text);
   text-decoration: none;
 }
@@ -212,4 +214,3 @@ textarea {
     margin: 0 8rem;
   }
 }
-
