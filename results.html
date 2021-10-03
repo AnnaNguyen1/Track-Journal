@@ -26,7 +26,7 @@
       </ul>
     </nav>
   </header>
-  
+
   <body>
     <main id="results-main">
       <section class="header-weather-container">
@@ -35,21 +35,22 @@
           <p class="search-address">
             Address: <span id="address-searched"></span>
           </p>
-          <p class="search-again">
-            <button type="button" class="home-page btn brown-border">
-              Search Again
-            </button>
-          </p>
         </h2>
-        <h2 class="weather">Weather: <span id="weather-result"></span></h2>
+        <h2 class="weather"><span id="weather-result"></span></h2>
+        <p class="search-again">
+          <button type="button" class="home-page btn brown-border">
+            Search Again
+          </button>
+        </p>
       </section>
 
       <!-- Container for the results to append to -->
-      <section class="results-container brown-border"></section>
+      <section class="results-container"></section>
     </main>
     <script
       type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+    ></script>
     <script src="Assets/js/results.js"></script>
   </body>
 </html>
