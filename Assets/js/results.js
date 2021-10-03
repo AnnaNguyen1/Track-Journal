@@ -164,7 +164,7 @@ function homePage(event) {
 
 function handleLogActivityPage(event) {
   event.preventDefault();
-  console.log("test");
+
 
   var queryString = "./logactivity.html";
 

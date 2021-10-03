@@ -3,6 +3,10 @@ var quoteAuthor = document.querySelector("#author");
 var autocompleteDiv = document.querySelector("#userLocation");
 var submitAddressSearch = document.querySelector("#searchBtn");
 var radiusInputVal = document.querySelector("#userRadius");
+var warningMessage = document.querySelector("#warning");
+// var modal = document.getElementById("myModal");
+// var btn = document.getElementById("myBtn");
+// var span = document.getElementsByClassName("close")[0];
 
 var lat = "";
 var lng = "";
@@ -54,29 +58,37 @@ function handleAddressSearch(event) {
   location.assign(queryString);
 }
 
-submitAddressSearch.addEventListener("click", handleAddressSearch);
-
 //Making only one selection to be selected
 
-function checkOnlyOne(element) {
-  const checkboxes = document.getElementsByName("difficulty");
 
-  checkboxes.forEach((cb) => {
-    cb.checked = false;
-  });
-  element.checked = true;
-}
+// function checkOnlyOne(element) {
+//   const checkboxes = document.getElementsByName("difficulty");
 
+//   checkboxes.forEach((cb) => {
+//     cb.checked = false;
+//   })
+//   element.checked = true;
+// }
 //Adding validation to radius
+
+
+//submitAddressSearch.addEventListener("click", validateform);
+
+
+submitAddressSearch.addEventListener("click", handleAddressSearch);
+
 function validateform() {
   var EnterAddress = document.startYourjournal.Address.value;
+
   var EnterRadius = document.startYourjournal.Radius.value;
 
-  if (EnterAddress == null || EnterAddress == "") {
-    alert("Address can't be blank");
-    return false;
+  if ((EnterAddress = null || EnterAddress == "")) {
+    //var message = "Please Enter a Valid Address and Radius";
+    warningMessage.setAttribute("style", "display:block");
   } else if (EnterRadius == null || EnterRadius == "") {
-    alert("Please set radius!!");
-    return false;
+    // var message = "Please Enter a Valid Address and Radius";
+    warningMessage.setAttribute("style", "display:block");
+  } else {
+    handleAddressSearch();
   }
 }
