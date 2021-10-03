@@ -97,6 +97,7 @@ select {
   margin-bottom: 2rem;
   border-radius: 0.5rem;
   border: solid var(--light-text);
+  font-family: var(--sans);
 }
 
 option {
@@ -107,7 +108,7 @@ option {
   width: 90%;
   border-radius: 1rem;
   padding: 2rem;
-  font-family: var(--poppins);
+  font-family: var(--sans);
   font-size: 1.5rem;
   font-weight: bold;
   border: solid var(--light-text);
