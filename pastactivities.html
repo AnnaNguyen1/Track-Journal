@@ -32,31 +32,25 @@
         <button type="button" id="all-activities">All Activities</button>
         <button type="button" id="easy">Easy</button>
         <button type="button" id="moderate">Moderate</button>
-        <button type="button" id="difficulty">Difficulty</button>
+        <button type="button" id="difficulty">Difficult</button>
       </div>
 
       <section class="activities-container">
         <!--Conatiner for the logged activities to get from local storage-->
-        <div class="activity-1">
+        <div class="activity-result">
           <p>Name:<span id="name-result"></span></p>
-
           <p>Address: <span id="address-result"></span></p>
+          <p>Comments: <span id="comment-result"></span></p>
+        </div>
 
-          <div class="pace-level">
-            <p>Difficulty:<span id="pace"></span></p>
-          </div>
-
-          <textarea name="comments" rows="5" cols="50">
-            Please share your comments
-          </textarea>
-
-          <div class="edit-button">
-            <button type="button" id="edit">View/Edit</button>
-          </div>
+        <div class="pace-level">
+          <p>Date: <span id="date"></span></p>
+          <p>Difficulty:<span id="pace"></span></p>
+          <button type="button" id="edit">View/Edit</button>
         </div>
       </section>
     </main>
-    <script src="Assets/js/script.js"></script>
+    <!-- <script src="Assets/js/script.js"></script> -->
     <script src="Assets/js/pastactivities.js"></script>
   </body>
 </html>

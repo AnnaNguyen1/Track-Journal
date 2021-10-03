@@ -1,7 +1,7 @@
 var editBtn = document.querySelector("#edit");
 
-function handleEdit(event) {
-  event.preventdefault();
+function handleEdit() {
+  // event.preventdefault();
   var queryString = "./logactivity.html";
   location.assign(queryString);
 }

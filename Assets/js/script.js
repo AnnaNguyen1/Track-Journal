@@ -60,6 +60,7 @@ function handleAddressSearch(event) {
 
 //Making only one selection to be selected
 
+
 // function checkOnlyOne(element) {
 //   const checkboxes = document.getElementsByName("difficulty");
 
@@ -70,7 +71,9 @@ function handleAddressSearch(event) {
 // }
 //Adding validation to radius
 
+
 //submitAddressSearch.addEventListener("click", validateform);
+
 
 submitAddressSearch.addEventListener("click", handleAddressSearch);
 

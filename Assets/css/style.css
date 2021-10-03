@@ -1,8 +1,8 @@
 :root {
-  --header-background: green;
   --light-text: #ffffff;
   --poppins: "Poppins", sans-serif;
   --sans: "Open Sans", sans-serif;
+  --dark-bg: rgb(0, 0, 0, 0.6);
 }
 
 * {
@@ -12,14 +12,15 @@
 
 html {
   font-size: 62.5%;
+  color: white;
 }
 
 nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-image: url("../images/walking.jpg");
-  background-repeat: no-repeat;
+  /* background-image: url("../images/walking.jpg");
+  background-repeat: no-repeat; */
   background-size: 100%;
   color: var(--light-text);
   font-family: var(--poppins);
@@ -28,11 +29,16 @@ nav {
 
 body {
   text-align: center;
+  width: 100%;
+  background-image: url(../images/walking.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 h1 {
   font-weight: 400;
-  font-size: 32px;
+  font-size: 3.2rem;
 }
 .title {
   font-size: 3rem;
@@ -52,65 +58,9 @@ h1 {
 li {
   padding: 1.5rem;
 }
-
 li a {
   color: var(--light-text);
-}
-
-.Log-form,
-.form-info {
-  display: flex;
-  flex-direction: column;
-}
-
-.Log-form {
-  justify-content: centre;
-  align-items: center;
-  width: 100%;
-  min-height: 100%;
-  background-image: url("../images/capture.JPG");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-form {
-  margin-bottom: 80px;
-  padding: 20px;
-  box-sizing: border-box;
-}
-input,
-select {
-  padding: 10px;
-  width: 80%;
-  margin-bottom: 20px;
-}
-
-option {
-  background: silver;
-}
-.form-info {
-  background-color: #f2f2f2;
-
-  padding: 20px;
-  border-radius: 5px;
-}
-
-.form-info button {
-  width: 100px;
-  background-color: #4caf50;
-  color: white;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-form {
-  display: inline-flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.difficulty-inline {
-  display: inline-block;
+  text-decoration: none;
 }
 
 .btn-container {
@@ -119,31 +69,20 @@ form {
   justify-content: space-evenly;
 }
 
-#all-activities,
-#easy,
-#moderate,
-#difficulty,
-#edit {
-  padding: 0.5rem;
-  margin: 2rem;
-  font-size: 2rem;
-  font-family: var(--sans);
-  border-radius: 1rem;
-  border: 3px solid rgb(87, 73, 73);
-  box-shadow: 0.5rem 0.5rem 1rem rgb(87, 73, 73);
-  background-color: rgb(87, 73, 73, 0.2);
-}
-
 .activities-container {
   display: flex;
-  margin: 2rem;
-  padding: 1rem;
-  border: 0.2rem solid black;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 4rem;
+  padding: 2rem;
+  box-shadow: 0px 0px 10px var(--light-text);
+  background-color: var(--dark-bg);
+  color: white;
 }
 
 .activities-container p {
   margin: 1.5rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: var(--sans);
 }
 
@@ -171,26 +110,34 @@ textarea {
   text-shadow: 0.2rem 0.1rem 0.2rem grey;
 }
 
-.btn {
-  font-family: var(--sans);
-  font-size: 2rem;
-  padding: 0.5rem 2rem;
-  margin-top: 1rem;
-}
-
-.brown-border {
+.brown-border,
+#all-activities,
+#easy,
+#moderate,
+#difficulty,
+#edit {
   border-radius: 1rem;
-  border: 3px solid rgb(87, 73, 73);
-  box-shadow: 0.5rem 0.5rem 1rem rgb(87, 73, 73);
-  background-color: rgb(87, 73, 73, 0.2);
+  box-shadow: 0px 0px 10px var(--light-text);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
-.home-page {
-  border: none;
-  background-color: white;
-  font-family: var(--poppins);
+.home-page,
+.btn,
+#all-activities,
+#easy,
+#moderate,
+#difficulty,
+#edit {
+  margin-right: 1rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  width: 15rem;
+  background-color: rgb(167, 131, 86);
+  color: white;
+  border-radius: 5rem;
+  cursor: pointer;
+  border: solid var(--light-text);
   font-size: 1.5rem;
-  font-weight: bold;
 }
 
 .results-container {
@@ -198,11 +145,10 @@ textarea {
 }
 
 .results-card {
-  margin: 4rem 4rem;
   font-family: var(--sans);
-  font-size: 2rem;
-  height: 34rem;
+  font-size: 1.5rem;
   position: relative;
+  color: white;
 }
 
 .results-card,
@@ -210,14 +156,15 @@ textarea {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  margin: 0 1rem;
-  margin-top: 1rem;
+  margin: 1rem 1rem;
+  margin-top: 1.5rem;
 }
 
 .results-details {
   padding-left: 1rem;
   line-height: 5rem;
   text-align: left;
+  color: white;
 }
 
 .button-container {
@@ -227,14 +174,42 @@ textarea {
 }
 
 .edit-button {
-  position: absolute;
-  left: 85%;
+  position: relative;
+  left: 50%;
   bottom: 5%;
 }
 
-.pace-level {
-  position: absolute;
-  left: 85%;
-  top: 50%;
+@media screen and (max-width: 992px) {
+  .header-weather-container {
+    font-size: 1.2rem;
+  }
+  .btn {
+    font-size: 1.2rem;
+  }
+  .button-container {
+    margin: 1rem;
+    bottom: 2%;
+  }
+  .map-result {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 926px) {
+  nav {
+    padding: 2rem;
+  }
+  body {
+    background-size: auto;
+  }
+  .header-list {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #results-main {
+    margin: 0 8rem;
+  }
 }
 
