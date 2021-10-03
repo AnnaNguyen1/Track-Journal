@@ -6,47 +6,47 @@
 }
 
 * {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
-  
+
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
-  
+
 nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background-image: url("../images/walkingtrack.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    color: var(--light-text);
-    font-family: var(--poppins);
-    padding: 6rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-image: url("../images/walkingtrack.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: var(--light-text);
+  font-family: var(--poppins);
+  padding: 6rem;
 }
 
 h1 {
-    font-weight: 400;
-    font-size: 32px;
+  font-weight: 400;
+  font-size: 32px;
 }
 .title {
-    font-size: 3rem;
+  font-size: 3rem;
 }
-  
+
 .subtitle,
 .header-list {
-    font-size: 2rem;
+  font-size: 2rem;
 }
-  
+
 .header-list {
-    display: inline-flex;
-    justify-content: space-evenly;
-    list-style: none;
+  display: inline-flex;
+  justify-content: space-evenly;
+  list-style: none;
 }
-  
-li {    
-    padding: 1.5rem;
+
+li {
+  padding: 1.5rem;
 }
 
 body {
@@ -132,4 +132,13 @@ form h2 {
 li a {
   color: var(--light-text);
 }
-
+#warning {
+  display: none;
+  padding: 0.5rem;
+  margin: 2rem;
+  border-radius: 1rem;
+  border: 3px solid rgb(87, 73, 73);
+  box-shadow: 0.5rem 0.5rem 1rem rgb(87, 73, 73);
+  background-color: rgb(87, 73, 73, 0.2);
+  color: var(--light-text);
+}

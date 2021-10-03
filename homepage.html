@@ -35,29 +35,30 @@
         "Everday may not be good... but there's something good in Everday"
       </h1>
       <h3 id="author">~unknown</h3>
-        <form name = "startYourjournal" class='userForm'>
-       
-      <form class="userForm">
-   
-        <h2>Start Your Journal</h2>
-        <div class="userInput">
-          <a>Enter Current Address</a>
-          <input
-            name= "Address"
-            id="userLocation"
-            placeholder="e.g 123 Smith Street, Suburb "
-            aria-label="Search"
-          />
-          <a>Search Radius</a>
-          <input
-            name = "Radius"
-            id="userRadius"
-            type="number"
-            placeholder="e.g 5km"
-            aria-label="Search"
-          />
-        </div>
-        <button id="searchBtn" onclick="validateform()">Search</button>
+      <form name="startYourjournal" class="userForm">
+        <form class="userForm">
+          <h2>Start Your Journal</h2>
+          <div class="userInput">
+            <a>Enter Current Address</a>
+            <input
+              name="Address"
+              id="userLocation"
+              placeholder="e.g 123 Smith Street, Suburb "
+              aria-label="Search"
+            />
+            <a>Search Radius</a>
+            <input
+              name="Radius"
+              id="userRadius"
+              type="number"
+              placeholder="e.g 5km"
+              aria-label="Search"
+            />
+          </div>
+          <button id="searchBtn" onclick="validateform()">Search</button>
+
+          <p id="warning">"Please Enter a Valid Address and Radius"</p>
+        </form>
       </form>
     </main>
     <script
@@ -65,6 +66,8 @@
       async
       defer
     ></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="Assets/js/script.js"></script>
   </body>
 </html>

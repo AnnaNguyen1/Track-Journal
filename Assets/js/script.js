@@ -1,29 +1,32 @@
-var quote = document.querySelector('#quote');
-var quoteAuthor = document.querySelector('#author');
+var quote = document.querySelector("#quote");
+var quoteAuthor = document.querySelector("#author");
 var autocompleteDiv = document.querySelector("#userLocation");
 var submitAddressSearch = document.querySelector("#searchBtn");
 var radiusInputVal = document.querySelector("#userRadius");
+var warningMessage = document.querySelector("#warning");
+// var modal = document.getElementById("myModal");
+// var btn = document.getElementById("myBtn");
+// var span = document.getElementsByClassName("close")[0];
 
 var lat = "";
 var lng = "";
 
-
 function getQuote() {
-    fetch("https://type.fit/api/quotes")
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(data) {
-    console.log(data);
-    var randomI = Math.floor(Math.random() * data.length);
-    console.log(randomI);
-    var displayQuote = data[randomI].text;
-    var displayAuthor = data[randomI].author;
-    quoteAuthor.textContent = displayAuthor;
-    quote.textContent = displayQuote;
-  });
-} 
-getQuote()
+  fetch("https://type.fit/api/quotes")
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+      var randomI = Math.floor(Math.random() * data.length);
+      console.log(randomI);
+      var displayQuote = data[randomI].text;
+      var displayAuthor = data[randomI].author;
+      quoteAuthor.textContent = displayAuthor;
+      quote.textContent = displayQuote;
+    });
+}
+getQuote();
 
 function initAutocomplete() {
   let autocomplete = new google.maps.places.Autocomplete(autocompleteDiv, {
@@ -55,31 +58,34 @@ function handleAddressSearch(event) {
   location.assign(queryString);
 }
 
-submitAddressSearch.addEventListener("click", handleAddressSearch);
-
-
 //Making only one selection to be selected
 
-function checkOnlyOne(element) {
-  const checkboxes = document.getElementsByName("difficulty");
+// function checkOnlyOne(element) {
+//   const checkboxes = document.getElementsByName("difficulty");
 
-  checkboxes.forEach((cb) => {
-    cb.checked = false;
-  })
-  element.checked = true;
-}
-
+//   checkboxes.forEach((cb) => {
+//     cb.checked = false;
+//   })
+//   element.checked = true;
+// }
 //Adding validation to radius
-function validateform(){
-var EnterAddress = document.startYourjournal.Address.value;
-var EnterRadius = document.startYourjournal.Radius.value;
 
-if (EnterAddress == null || EnterAddress=="") {
-  alert ("Address can't be blank");
-  return false;
-}
-else if(EnterRadius ==null || EnterRadius==""){
-  alert ("Please set radius!!");
-  return false;
-}
+//submitAddressSearch.addEventListener("click", validateform);
+
+submitAddressSearch.addEventListener("click", handleAddressSearch);
+
+function validateform() {
+  var EnterAddress = document.startYourjournal.Address.value;
+
+  var EnterRadius = document.startYourjournal.Radius.value;
+
+  if ((EnterAddress = null || EnterAddress == "")) {
+    //var message = "Please Enter a Valid Address and Radius";
+    warningMessage.setAttribute("style", "display:block");
+  } else if (EnterRadius == null || EnterRadius == "") {
+    // var message = "Please Enter a Valid Address and Radius";
+    warningMessage.setAttribute("style", "display:block");
+  } else {
+    handleAddressSearch();
+  }
 }
