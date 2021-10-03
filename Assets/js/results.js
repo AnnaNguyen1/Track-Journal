@@ -99,9 +99,9 @@ function renderResults(searchResults) {
     var lngLocation = searchResults.results[i].geometry.location.lng;
 
     var resultCard = `
-    <div class="results-card" data-location="${latLocation}&${lngLocation}">
+    <div class="results-card brown-border" data-location="${latLocation}&${lngLocation}">
       <div class="map-result">
-      <iframe width="600" height="300" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?key=${googleApiKey} &q=${nameLocationUrl}"></iframe>
+      <iframe width="400" height="300" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?key=${googleApiKey} &q=${nameLocationUrl}"></iframe>
         <div class="results-details">
           <p>Name: <span id="name-result">${nameLocation}</span></p>
           <p>Address: <span id="address-result">${addressLocation}</span></p>
@@ -137,20 +137,15 @@ function getWeather(lat, lng) {
       var currentWeather = document.createElement("div");
       currentWeather.setAttribute("class", "weather");
 
-      var currentDate = document.createElement("h3");
-      var date = moment().format("DD/MM/YYYY");
-      currentDate.textContent = "Date: " + date;
-      currentWeather.appendChild(currentDate);
+      var temp = document.createElement("p");
+      temp.textContent = "Temperature: " + response.current.temp + "\u00B0C";
+      currentWeather.appendChild(temp);
 
       var weatherIcon = document.createElement("img");
       var iconcode = response.current.weather[0].icon;
       weatherIcon.src =
         "https://openweathermap.org/img/wn/" + iconcode + ".png";
       currentWeather.appendChild(weatherIcon);
-
-      var temp = document.createElement("p");
-      temp.textContent = "Temperature: " + response.current.temp + "\u00B0C";
-      currentWeather.appendChild(temp);
 
       weatherUpdate.append(currentWeather);
       // console.log(date);

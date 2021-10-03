@@ -1,126 +1,157 @@
 :root {
-    --header-background: green;
-    --light-text: #ffffff;
-    --poppins: "Poppins", sans-serif;
-    --sans: "Open Sans", sans-serif;
+  --header-background: green;
+  --light-text: #ffffff;
+  --poppins: "Poppins", sans-serif;
+  --sans: "Open Sans", sans-serif;
 }
-  
+
 * {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
-  
+
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
-  
+
 nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background-image: url("../images/walkingtrack.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    color: var(--light-text);
-    font-family: var(--poppins);
-    padding: 6rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-image: url("../images/walkingtrack.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: var(--light-text);
+  font-family: var(--poppins);
+  padding: 6rem;
 }
 body {
-    width: 100%;
-    background-image: url(../images/walking.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: var(--light-text);
+  width: 100%;
+  background-image: url(../images/walking.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: var(--light-text);
 }
 nav {
-    background-image: none;
+  background-image: none;
 }
 main {
-    color: var(--light-text);
-}  
+  color: var(--light-text);
+}
 h1 {
-    font-weight: 400;
-    font-size: 32px;
+  font-weight: 400;
+  font-size: 3.2rem;
 }
 .title {
-    font-size: 3rem;
+  font-size: 3rem;
 }
-  
+
 .subtitle,
 .header-list {
-    font-size: 2rem;
-} 
-.header-list {
-    display: inline-flex;
-    justify-content: space-evenly;
-    list-style: none;
+  font-size: 2rem;
 }
-  
+.header-list {
+  display: inline-flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
 li {
-    padding: 1.5rem;
+  padding: 1.5rem;
 }
 li a {
-    color: var(--light-text);
-    text-decoration: none;
+  color: var(--light-text);
+  text-decoration: none;
 }
 
 #logActivityTitle {
-    margin-left: 100px;
-    margin-bottom: 0px;
-    font-family: 'Sacramento', cursive;
-    font-size: 9rem;
-    color: var(--light-text);
+  text-align: center;
+  margin-bottom: 0;
+  font-family: "Sacramento", cursive;
+  font-size: 7rem;
+  color: var(--light-text);
 }
 .form-info {
-    margin-left: 100px;
-    background-color: rgb(0, 0, 0, 0.6);
-    background-origin: border-box;
-    width: 50%;
-    margin-bottom: 50px;
-    padding: 30px;   
-    font-family: var(--poppins);
-    color: var(--light-text);
-    font-weight: bold;
-    font-size: 1.8rem;
-    border-radius: 15px;
-    box-shadow: 0px 0px 10px var(--light-text);
-    opacity: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(0, 0, 0, 0.6);
+  background-origin: border-box;
+  width: 50%;
+  margin-bottom: 5rem;
+  padding: 3rem;
+  font-family: var(--poppins);
+  color: var(--light-text);
+  font-weight: bold;
+  font-size: 1.8rem;
+  border-radius: 1.5rem;
+  box-shadow: 0px 0px 10px var(--light-text);
+  opacity: 90%;
 }
 
 input,
 select {
-    padding: 10px;
-    width: 35%;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: solid var(--light-text);
-}  
-option {
-    background: silver;
+  padding: 1rem;
+  width: 60%;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  border: solid var(--light-text);
+  font-family: var(--sans);
 }
-#comment {
-    width: 60%;
-    border-radius: 10px;
-    padding: 20px;
-    font-family: var(--poppins);
-    font-size: 1.5rem;
-    font-weight: bold;
-    border: solid var(--light-text);
-}
-.form-info button {
 
-    margin-right: 10px;
-    margin-top: 10px;
-    padding: 10px;
-    width: 150px;
-    background-color: rgb(167, 131, 86);
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    border: solid var(--light-text);
+option {
+  background: silver;
 }
+
+#comment {
+  width: 90%;
+  border-radius: 1rem;
+  padding: 2rem;
+  font-family: var(--sans);
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: solid var(--light-text);
+}
+
+.form-info button {
+  margin-right: 1rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  width: 15rem;
+  background-color: rgb(167, 131, 86);
+  color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border: solid var(--light-text);
+}
+
 .form-info button:hover {
-    box-shadow: 0px 0px 10px var(--light-text);
+  box-shadow: 0 0 1rem var(--light-text);
+}
+
+@media screen and (max-width: 1224px) {
+  body {
+    background-size: auto;
+  }
+}
+
+@media screen and (max-width: 668px) {
+  nav {
+    justify-content: space-around;
+  }
+  .title,
+  .subtitle {
+    text-align: center;
+  }
+  #logActivityTitle {
+    font-size: 6rem;
+  }
+  input,
+  select {
+    width: 90%;
+  }
+  .form-info button {
+    width: 10rem;
+  }
 }
