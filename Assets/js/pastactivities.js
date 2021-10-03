@@ -1,4 +1,5 @@
 var editBtn = document.querySelector("#edit");
+var activitiesContainer = document.querySelector(".activities-container");
 
 function handleEdit() {
   // event.preventdefault();

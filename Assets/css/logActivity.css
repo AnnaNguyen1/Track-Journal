@@ -60,7 +60,8 @@ h1 {
 li {
   padding: 1.5rem;
 }
-li a {
+li a,
+.title a {
   color: var(--light-text);
   text-decoration: none;
 }

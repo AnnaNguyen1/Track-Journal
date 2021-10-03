@@ -38,7 +38,7 @@
 
       <form name="startYourjournal" class="userForm">
         <form class="userForm">
-          <h2>Start Your Journal</h2>
+          <h2>Find A Park Near Me</h2>
           <div class="userInput">
             <a>Enter Current Address</a>
             <input
@@ -47,20 +47,19 @@
               placeholder="e.g 123 Smith Street, Suburb "
               aria-label="Search"
             />
-            <a>Search Radius</a>
+            <a>Search Radius (km)</a>
             <input
               name="Radius"
               id="userRadius"
               type="number"
-              placeholder="e.g 5km"
+              placeholder="e.g 5"
               aria-label="Search"
             />
           </div>
-          <button id="searchBtn" onclick="validateform()">Search</button>
+          <button id="searchBtn" type="button">Search</button>
 
           <p id="warning">"Please Enter a Valid Address and Radius"</p>
         </form>
-
       </form>
     </main>
     <script
