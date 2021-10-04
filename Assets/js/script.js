@@ -17,9 +17,7 @@ function getQuote() {
       return response.json();
     })
     .then(function (data) {
-      console.log(data);
       var randomI = Math.floor(Math.random() * data.length);
-      console.log(randomI);
       var displayQuote = data[randomI].text;
       var displayAuthor = data[randomI].author;
       quoteAuthor.textContent = displayAuthor;
@@ -37,18 +35,13 @@ function initAutocomplete() {
 
   google.maps.event.addListener(autocomplete, "place_changed", function () {
     var a = autocomplete.getPlace();
-    console.log(a);
-
     lat = a.geometry.location.lat();
     lng = a.geometry.location.lng();
-
-    console.log(lat, lng);
   });
 }
 
 function handleAddressSearch(event) {
   event.preventDefault();
-  console.log("test");
   var enterAddress = document.startYourjournal.Address.value;
   var enterRadius = document.startYourjournal.Radius.value;
   var queryString =

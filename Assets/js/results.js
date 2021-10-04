@@ -20,9 +20,6 @@ function getParams() {
   var radius = searchParamsArr[2].split("=").pop();
   radius = radius * 1000;
 
-  console.log(lat);
-  console.log(lng);
-  console.log(radius);
 
   searchApi(lat, lng, radius);
   displayAddress(lat, lng);
@@ -44,7 +41,6 @@ function searchApi(lat, lng, radius) {
     "&key=" +
     googleApiKey;
 
-  console.log(queryUrl);
 
   fetch(queryUrl)
     .then(function (response) {
@@ -66,7 +62,6 @@ function displayAddress(lat, lng) {
     lng +
     "&key=" +
     googleApiKey;
-  console.log(geocodeApiQuery);
 
   fetch(geocodeApiQuery)
     .then(function (response) {
@@ -81,9 +76,7 @@ function displayAddress(lat, lng) {
 }
 
 function renderAddress(addressResult) {
-  console.log(addressResult);
   var address = addressResult.results[0].formatted_address;
-  console.log(address);
   addressField.innerHTML = address;
 }
 
@@ -133,7 +126,6 @@ function getWeather(lat, lng) {
       return response.json();
     })
     .then(function (response) {
-      console.log(response);
       var currentWeather = document.createElement("div");
       currentWeather.setAttribute("class", "weather");
 
@@ -148,9 +140,6 @@ function getWeather(lat, lng) {
       currentWeather.appendChild(weatherIcon);
 
       weatherUpdate.append(currentWeather);
-      // console.log(date);
-      // console.log(temp);
-      // console.log(iconurl);
     });
 }
 
@@ -165,14 +154,12 @@ function homePage(event) {
 function handleLogActivityPage(event) {
   var dataLanLng = event.target.getAttribute("data-button");
   dataLanLngArr = dataLanLng.split("&");
-  console.log(dataLanLngArr);
   var name = dataLanLngArr[0];
   lat = dataLanLngArr[1];
   lng = dataLanLngArr[2];
 
   var queryStringLog =
     "./logactivity.html?q=name=" + name + "&lat=" + lat + "&lng=" + lng;
-  console.log(queryStringLog);
   location.assign(queryStringLog);
 }
 
