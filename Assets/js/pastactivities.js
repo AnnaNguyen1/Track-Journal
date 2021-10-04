@@ -48,6 +48,21 @@ function renderHistory () {
       editBtn.textContent = 'Edit';
       resultsDiv.appendChild(editBtn);
 
+      var deleteBtn = document.createElement('button');
+      deleteBtn.setAttribute('id', 'edit');
+      deleteBtn.setAttribute('data-delete', getHistory[i]);
+      deleteBtn.textContent = 'Delete';
+      resultsDiv.appendChild(deleteBtn);
+
+    deleteBtn.addEventListener('click', function (event) {
+      var logData = event.target.getAttribute('data-delete');
+      if(logData !== -1) {
+        getHistory.splice(logData,1);
+        localStorage.setItem('userHistory', JSON.stringify(getHistory));
+        document.location.reload("./pastactivies.html");
+      }
+    });
+
       editBtn.addEventListener('click', function () {
         var queryString = "./logactivity.html";
         location.assign(queryString);
