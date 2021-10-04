@@ -44,7 +44,6 @@ saveBtn.addEventListener("click", function (event) {
       pace: savedPace,
       comments: savedComments,
     };
-    console.log(savedDate);
     var userHistory = localStorage.getItem("userHistory");
     if (userHistory === null) {
       userHistory = [];
@@ -74,9 +73,7 @@ function getParams() {
     return;
   } else if (document.location.search.indexOf("name") === -1) {
     var searchParamsDate = document.location.search.split("=");
-    console.log(searchParamsDate);
     var date = searchParamsDate[1].split("=").pop();
-    console.log(date);
     displayActivity(date);
   } else {
     // Get Search params out of the URL
@@ -101,7 +98,6 @@ function displayAddress(lat, lng) {
     lng +
     "&key=" +
     googleApiKey;
-  console.log(geocodeApiQuery);
 
   fetch(geocodeApiQuery)
     .then(function (response) {
@@ -127,7 +123,6 @@ function displayName(parkName) {
 function displayActivity(date) {
   var getHistory = localStorage.getItem("userHistory");
   getHistory = JSON.parse(getHistory);
-  console.log(getHistory);
   for (var i = 0; i < getHistory.length; i++) {
     if (getHistory[i].date === date) {
       trackName.value = getHistory[i].name;
