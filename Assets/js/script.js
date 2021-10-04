@@ -65,3 +65,4 @@ function handleAddressSearch(event) {
 }
 
 submitAddressSearch.addEventListener("click", handleAddressSearch);
+// google.maps.event.addDomListener(window, "load", initAutocomplete);
