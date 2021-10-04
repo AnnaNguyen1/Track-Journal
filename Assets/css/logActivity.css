@@ -122,9 +122,10 @@ option {
   width: 15rem;
   background-color: rgb(167, 131, 86);
   color: white;
-  border-radius: 0.5rem;
+  border-radius: 5rem;
   cursor: pointer;
   border: solid var(--light-text);
+  font-size: 1.5rem;
 }
 
 .form-info button:hover {

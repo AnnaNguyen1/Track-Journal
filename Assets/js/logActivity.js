@@ -10,6 +10,7 @@ var trackDifficulty = document.querySelector("#difficulty-select");
 var userComments = document.querySelector("#comment");
 var formName = document.querySelector(".form-name");
 
+
 resetBtn.addEventListener("click", function () {
   activityDate.textContent = "";
   trackName.textContent = "";
@@ -20,8 +21,14 @@ resetBtn.addEventListener("click", function () {
 
 saveBtn.addEventListener("click", function (event) {
   event.preventDefault();
+  
   var savedDate = activityDate.value;
-  console.log(savedDate);
+  var savedName = trackName.value;
+  var savedAddress = trackAddress.value;
+  var savedTime = userTime.value;
+  var savedDifficulty = trackDifficulty.value;
+  var savedPace = userPace.value;
+  var savedComments = userComments.value;
 
   if (!savedDate || !trackName.value || !trackAddress.value) {
     var errorMessage = document.createElement("p");
@@ -30,25 +37,31 @@ saveBtn.addEventListener("click", function (event) {
     formName.appendChild(errorMessage);
     return;
   } else {
-    var savedName = trackName.value;
-    var savedAddress = trackAddress.value;
-    var savedTime = userTime.value;
-    var savedDifficulty = trackDifficulty.value;
-    var savedPace = userPace.value;
-    var savedComments = userComments.value;
 
     var userInfo = {
       name: savedName,
       address: savedAddress,
+      date: savedDate,
       time: savedTime,
       difficulty: savedDifficulty,
       pace: savedPace,
       comments: savedComments,
     };
     console.log(userInfo);
-    localStorage.setItem(savedDate, JSON.stringify(userInfo));
-
+    var userHistory = localStorage.getItem('userHistory');
+    if (userHistory === null) {
+      userHistory = [];
+    } else {
+      userHistory = JSON.parse(userHistory);
+    }
+    userHistory.push(userInfo);
+    var addInfo = JSON.stringify(userHistory);
+    localStorage.setItem('userHistory', addInfo);
+    // localStorage.setItem(savedDate, JSON.stringify(userInfo));
+    
+    
     var queryString = "./pastactivities.html";
     location.assign(queryString);
+    
   }
 });
