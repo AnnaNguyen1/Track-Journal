@@ -12,6 +12,7 @@ var formName = document.querySelector(".form-name");
 var errorMessage = document.querySelector("#error");
 var googleApiKey = "AIzaSyA5VJt7YAIL8Ftw1lC8bHtB_AnF0eyCDtw";
 
+
 resetBtn.addEventListener("click", function () {
   activityDate.textContent = "";
   trackName.textContent = "";
@@ -53,13 +54,16 @@ saveBtn.addEventListener("click", function (event) {
     }
     userHistory.push(userInfo);
     var addInfo = JSON.stringify(userHistory);
-    localStorage.setItem("userHistory", addInfo);
-    // localStorage.setItem(savedDate, JSON.stringify(userInfo));
-    // console.log(activityDate);
+
+
+    localStorage.setItem('userHistory', addInfo);
+    
+
     var queryString = "./pastactivities.html";
     location.assign(queryString);
   }
 });
+
 
 function getParams() {
   if (document.location.search.indexOf("=") === -1) {
@@ -133,3 +137,4 @@ function displayActivity(date) {
 }
 
 getParams();
+
