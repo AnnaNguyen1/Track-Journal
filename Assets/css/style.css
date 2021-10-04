@@ -120,19 +120,21 @@ textarea {
 }
 
 .brown-border,
-#edit {
+#edit,
+#delete {
   border-radius: 1rem;
   background-color: rgba(0, 0, 0, 0.6);
 }
 #edit:hover,
-.home-page:hover,
+#delete:hover. .home-page:hover,
 .btn:hover {
   box-shadow: 0px 0px 10px var(--light-text);
 }
 
 .home-page,
 .btn,
-#edit {
+#edit,
+#delete {
   margin-right: 1rem;
   margin-top: 1rem;
   padding: 1rem;

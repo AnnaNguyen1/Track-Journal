@@ -1,5 +1,6 @@
 // var activitiesContainer = document.querySelector(".activities-container");
 var displayDiv = document.querySelector(".displayDiv");
+var editButton = document.querySelector("#edit");
 
 function renderHistory() {
   var getHistory = localStorage.getItem("userHistory");
@@ -48,38 +49,28 @@ function renderHistory() {
       editBtn.textContent = "Edit";
       resultsDiv.appendChild(editBtn);
 
-
-      var deleteBtn = document.createElement('button');
-      deleteBtn.setAttribute('id', 'edit');
-      deleteBtn.setAttribute('data-delete', getHistory[i]);
-      deleteBtn.textContent = 'Delete';
+      var deleteBtn = document.createElement("button");
+      deleteBtn.setAttribute("id", "delete");
+      deleteBtn.setAttribute("data-delete", getHistory[i]);
+      deleteBtn.textContent = "Delete";
       resultsDiv.appendChild(deleteBtn);
 
-    deleteBtn.addEventListener('click', function (event) {
-      var logData = event.target.getAttribute('data-delete');
-      if(logData !== -1) {
-        getHistory.splice(logData,1);
-        localStorage.setItem('userHistory', JSON.stringify(getHistory));
-        document.location.reload("./pastactivies.html");
-      }
-    });
-
-      editBtn.addEventListener('click', function () {
-        var queryString = "./logactivity.html";
-        location.assign(queryString);
+      deleteBtn.addEventListener("click", function (event) {
+        var logData = event.target.getAttribute("data-delete");
+        if (logData !== -1) {
+          getHistory.splice(logData, 1);
+          localStorage.setItem("userHistory", JSON.stringify(getHistory));
+          document.location.reload("./pastactivies.html");
+        }
       });
 
-
+      editBtn.addEventListener("click", function (event) {
+        var dateData = event.target.getAttribute("data-edit");
+        var queryString = "./logactivity.html?date=" + dateData;
+        location.assign(queryString);
+      });
     }
   }
 }
+
 renderHistory();
-
-function editActivityPage(event) {
-  var dateData = event.target.getAttribute("data-edit");
-  console.log(dateData);
-  var queryString = "./logactivity.html?q=date=" + dateData;
-  location.assign(queryString);
-}
-
-displayDiv.addEventListener("click", editActivityPage);

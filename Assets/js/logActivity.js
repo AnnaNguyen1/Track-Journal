@@ -12,7 +12,6 @@ var formName = document.querySelector(".form-name");
 var errorMessage = document.querySelector("#error");
 var googleApiKey = "AIzaSyA5VJt7YAIL8Ftw1lC8bHtB_AnF0eyCDtw";
 
-
 resetBtn.addEventListener("click", function () {
   activityDate.textContent = "";
   trackName.textContent = "";
@@ -32,7 +31,7 @@ saveBtn.addEventListener("click", function (event) {
   var savedPace = userPace.value;
   var savedComments = userComments.value;
 
-  if (!savedDate || !trackName.value || !trackAddress.value) {
+  if (!savedDate || !savedName || !savedAddress) {
     errorMessage.style.display = "block";
     return;
   } else {
@@ -52,18 +51,23 @@ saveBtn.addEventListener("click", function (event) {
     } else {
       userHistory = JSON.parse(userHistory);
     }
-    userHistory.push(userInfo);
+    var foundItem = false;
+    for (var i = 0; i < userHistory.length; i++) {
+      if (userHistory[i].date === savedDate) {
+        userHistory[i] = userInfo;
+        foundItem = true;
+        break;
+      }
+    }
+    if (!foundItem) userHistory.push(userInfo);
     var addInfo = JSON.stringify(userHistory);
 
-
-    localStorage.setItem('userHistory', addInfo);
-    
+    localStorage.setItem("userHistory", addInfo);
 
     var queryString = "./pastactivities.html";
     location.assign(queryString);
   }
 });
-
 
 function getParams() {
   if (document.location.search.indexOf("=") === -1) {
@@ -71,7 +75,8 @@ function getParams() {
   } else if (document.location.search.indexOf("name") === -1) {
     var searchParamsDate = document.location.search.split("=");
     console.log(searchParamsDate);
-    var date = searchParamsDate[2].split("=").pop();
+    var date = searchParamsDate[1].split("=").pop();
+    console.log(date);
     displayActivity(date);
   } else {
     // Get Search params out of the URL
@@ -123,7 +128,7 @@ function displayActivity(date) {
   var getHistory = localStorage.getItem("userHistory");
   getHistory = JSON.parse(getHistory);
   console.log(getHistory);
-  for (i = 0; i < getHistory.length; i++) {
+  for (var i = 0; i < getHistory.length; i++) {
     if (getHistory[i].date === date) {
       trackName.value = getHistory[i].name;
       trackAddress.value = getHistory[i].address;
@@ -137,4 +142,3 @@ function displayActivity(date) {
 }
 
 getParams();
-
