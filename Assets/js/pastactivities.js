@@ -1,32 +1,59 @@
-var editBtn = document.querySelector("#edit");
-var activitiesContainer = document.querySelector(".activities-container");
+// var activitiesContainer = document.querySelector(".activities-container");
+var displayDiv = document.querySelector('.displayDiv');
 
-function handleEdit() {
-  // event.preventdefault();
-  var queryString = "./logactivity.html";
-  location.assign(queryString);
-}
+function renderHistory () {
+  var getHistory = localStorage.getItem('userHistory');
+  getHistory = JSON.parse(getHistory);
 
-editBtn.addEventListener("click", handleEdit);
+  if (getHistory !== null) {
+    for (var i = 0; i < getHistory.length; i++) {
+      
+      //create divs to dipslay content
+      var activitiesContainer = document.createElement('div');
+      activitiesContainer.setAttribute('class', 'activities-container');
+      displayDiv.appendChild(activitiesContainer);
 
-displayActivities();
+      var resultsDiv = document.createElement('div');
+      resultsDiv.setAttribute('class', 'activity-result');
+      activitiesContainer.appendChild(resultsDiv);
 
-function displayActivities() {
-  for (var i = 0; i < localStorage.length; i++) {
-    // Get Key by index
-    var key = localStorage.key(i);
+      //info to be displayed in resultsDiv
+      var displayDate = document.createElement('p');
+      displayDate.textContent = 'Date: ' + getHistory[i].date;
+      resultsDiv.appendChild(displayDate);
 
-    if (key.indexOf("20") === 0) {
-      var activities = localStorage.getItem(key);
-      console.log(activities);
+      var displayName = document.createElement('p');
+      displayName.textContent = 'Name: ' + getHistory[i].name;
+      resultsDiv.appendChild(displayName);
 
-      // for (var i = 0; i < activities.length; i++) {
-      //   var name = activities[i].name;
-      //   var address = activities[i].address;
-      //   var comments = activities[i].comments;
-      //   var difficulty = activities[i].difficulty;
-      //   console.log(name, address, comments, difficulty);
-      // }
+      var displayAddress = document.createElement('p');
+      displayAddress.textContent = 'Address: ' + getHistory[i].address;
+      resultsDiv.appendChild(displayAddress);
+
+      var displayPace = document.createElement('p');
+      displayPace.textContent = 'Pace: ' + getHistory[i].pace;
+      resultsDiv.appendChild(displayPace);
+
+      var displayDiff = document.createElement('p');
+      displayDiff.textContent = 'Difficulty: ' + getHistory[i].difficulty;
+      resultsDiv.appendChild(displayDiff);
+
+      var displayComments = document.createElement('p');
+      displayComments.textContent = 'Comments: ' + getHistory[i].comments;
+      resultsDiv.appendChild(displayComments);
+
+      //edit button created for give user the ability make changes
+      var editBtn = document.createElement('button');
+      editBtn.setAttribute('id', 'edit');
+      editBtn.textContent = 'Edit';
+      resultsDiv.appendChild(editBtn);
+
+      editBtn.addEventListener('click', function () {
+        var queryString = "./logactivity.html";
+        location.assign(queryString);
+      });
+
     }
   }
 }
+renderHistory();
