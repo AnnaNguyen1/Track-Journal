@@ -66,6 +66,10 @@ li a,
   text-decoration: none;
 }
 
+h3 {
+  font-weight: normal;
+}
+
 #logActivityTitle {
   text-align: center;
   margin-bottom: 0;

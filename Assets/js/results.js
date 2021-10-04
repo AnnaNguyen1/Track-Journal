@@ -109,7 +109,7 @@ function renderResults(searchResults) {
           </div>
         </div>
       <div class="button-container">
-        <button type="button" class="log-activity btn brown-border">Log Activity</button>
+        <button type="button" class="log-activity btn brown-border" data-button="${nameLocationUrl}&${latLocation}&${lngLocation}"">Log Activity</button>
       </div>
     </div> `;
 
@@ -163,19 +163,19 @@ function homePage(event) {
 }
 
 function handleLogActivityPage(event) {
-  event.preventDefault();
+  var dataLanLng = event.target.getAttribute("data-button");
+  dataLanLngArr = dataLanLng.split("&");
+  console.log(dataLanLngArr);
+  var name = dataLanLngArr[0];
+  lat = dataLanLngArr[1];
+  lng = dataLanLngArr[2];
 
-
-  var queryString = "./logactivity.html";
-
-  location.assign(queryString);
+  var queryStringLog =
+    "./logactivity.html?q=name=" + name + "&lat=" + lat + "&lng=" + lng;
+  console.log(queryStringLog);
+  location.assign(queryStringLog);
 }
 
-resultsContainer.addEventListener(
-  "click",
-  logActivityBtn,
-  handleLogActivityPage
-);
-
+resultsContainer.addEventListener("click", handleLogActivityPage);
 searchAgain.addEventListener("click", homePage);
 getParams();
