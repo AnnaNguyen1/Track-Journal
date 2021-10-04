@@ -90,7 +90,7 @@ function renderAddress(addressResult) {
 function renderResults(searchResults) {
   resultsContainer.textContent = "";
 
-  for (var i = 0; i < 5; i++) {
+  for (var i = 0; i < 10; i++) {
     var nameLocation = searchResults.results[i].name;
     var addressLocation = searchResults.results[i].vicinity;
     var nameLocationUrl = nameLocation.split(" ").join("+");

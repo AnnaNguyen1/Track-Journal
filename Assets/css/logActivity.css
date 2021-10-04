@@ -109,6 +109,10 @@ option {
   background: silver;
 }
 
+#error {
+  display: none;
+}
+
 #comment {
   width: 90%;
   border-radius: 1rem;
