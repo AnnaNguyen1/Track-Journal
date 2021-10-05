@@ -32,17 +32,23 @@ function renderHistory() {
       displayAddress.textContent = "Address: " + getHistory[i].address;
       resultsDiv.appendChild(displayAddress);
 
-      var displayPace = document.createElement("p");
-      displayPace.textContent = "Pace: " + getHistory[i].pace;
-      resultsDiv.appendChild(displayPace);
+      if (getHistory[i].pace != "") {
+        var displayPace = document.createElement("p");
+        displayPace.textContent = "Pace: " + getHistory[i].pace;
+        resultsDiv.appendChild(displayPace);
+      }
 
-      var displayDiff = document.createElement("p");
-      displayDiff.textContent = "Difficulty: " + getHistory[i].difficulty;
-      resultsDiv.appendChild(displayDiff);
+      if (getHistory[i].difficulty != "") {
+        var displayDiff = document.createElement("p");
+        displayDiff.textContent = "Difficulty: " + getHistory[i].difficulty;
+        resultsDiv.appendChild(displayDiff);
+      }
 
-      var displayComments = document.createElement("p");
-      displayComments.textContent = "Comments: " + getHistory[i].comments;
-      resultsDiv.appendChild(displayComments);
+      if (getHistory[i].comments != "") {
+        var displayComments = document.createElement("p");
+        displayComments.textContent = "Comments: " + getHistory[i].comments;
+        resultsDiv.appendChild(displayComments);
+      }
 
       //edit button created for give user the ability make changes
       var editBtn = document.createElement("button");
@@ -53,15 +59,17 @@ function renderHistory() {
 
       var deleteBtn = document.createElement("button");
       deleteBtn.setAttribute("id", "delete");
-      deleteBtn.setAttribute("data-delete", getHistory[i]);
+      deleteBtn.setAttribute("data-delete", getHistory[i].id);
       deleteBtn.textContent = "Delete";
       resultsDiv.appendChild(deleteBtn);
 
       deleteBtn.addEventListener("click", function (event) {
-        var logData = event.target.getAttribute("data-delete");
+        var logData = this.getAttribute("data-delete");
         if (logData !== -1) {
-          getHistory.splice(logData, 1);
-          localStorage.setItem("userHistory", JSON.stringify(getHistory));
+          var savedHistory = getHistory.filter(function (el) {
+            return el.id != logData;
+          });
+          localStorage.setItem("userHistory", JSON.stringify(savedHistory));
           document.location.reload("./pastactivies.html");
         }
       });
