@@ -47,7 +47,7 @@ function renderHistory() {
       //edit button created for give user the ability make changes
       var editBtn = document.createElement("button");
       editBtn.setAttribute("id", "edit");
-      editBtn.setAttribute("data-edit", getHistory[i].date);
+      editBtn.setAttribute("data-edit", getHistory[i].id);
       editBtn.textContent = "Edit";
       resultsDiv.appendChild(editBtn);
 
@@ -68,7 +68,7 @@ function renderHistory() {
 
       editBtn.addEventListener("click", function (event) {
         var dateData = event.target.getAttribute("data-edit");
-        var queryString = "./logactivity.html?date=" + dateData;
+        var queryString = "./logactivity.html?id=" + dateData;
         location.assign(queryString);
       });
     }

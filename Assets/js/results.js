@@ -20,7 +20,6 @@ function getParams() {
   var radius = searchParamsArr[2].split("=").pop();
   radius = radius * 1000;
 
-
   searchApi(lat, lng, radius);
   displayAddress(lat, lng);
   //calling the function to display current weather
@@ -40,7 +39,6 @@ function searchApi(lat, lng, radius) {
     radius +
     "&key=" +
     googleApiKey;
-
 
   fetch(queryUrl)
     .then(function (response) {
@@ -159,7 +157,7 @@ function handleLogActivityPage(event) {
   lng = dataLanLngArr[2];
 
   var queryStringLog =
-    "./logactivity.html?q=name=" + name + "&lat=" + lat + "&lng=" + lng;
+    "./logactivity.html?name=" + name + "&lat=" + lat + "&lng=" + lng;
   location.assign(queryStringLog);
 }
 

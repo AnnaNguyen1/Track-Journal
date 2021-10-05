@@ -45,13 +45,7 @@ function handleAddressSearch(event) {
   var enterAddress = document.startYourjournal.Address.value;
   var enterRadius = document.startYourjournal.Radius.value;
   var queryString =
-    "./results.html?q=" +
-    "lat=" +
-    lat +
-    "&lng=" +
-    lng +
-    "&radius=" +
-    enterRadius;
+    "./results.html?lat=" + lat + "&lng=" + lng + "&radius=" + enterRadius;
 
   if ((enterAddress = null || enterAddress == "")) {
     //var message = "Please Enter a Valid Address and Radius";
@@ -65,4 +59,3 @@ function handleAddressSearch(event) {
 }
 
 submitAddressSearch.addEventListener("click", handleAddressSearch);
-// google.maps.event.addDomListener(window, "load", initAutocomplete);
