@@ -23,6 +23,7 @@ resetBtn.addEventListener("click", function () {
 saveBtn.addEventListener("click", function (event) {
   event.preventDefault();
 
+  var activityId = Date.now();
   var savedDate = activityDate.value;
   var savedName = trackName.value;
   var savedAddress = trackAddress.value;
@@ -36,6 +37,7 @@ saveBtn.addEventListener("click", function (event) {
     return;
   } else {
     var userInfo = {
+      id: activityId,
       name: savedName,
       address: savedAddress,
       date: savedDate,
@@ -51,8 +53,9 @@ saveBtn.addEventListener("click", function (event) {
       userHistory = JSON.parse(userHistory);
     }
     var foundItem = false;
+    var editId = document.location.search.split("=").pop();
     for (var i = 0; i < userHistory.length; i++) {
-      if (userHistory[i].date === savedDate) {
+      if (userHistory[i].id == editId) {
         userHistory[i] = userInfo;
         foundItem = true;
         break;
@@ -72,9 +75,9 @@ function getParams() {
   if (document.location.search.indexOf("=") === -1) {
     return;
   } else if (document.location.search.indexOf("name") === -1) {
-    var searchParamsDate = document.location.search.split("=");
-    var date = searchParamsDate[1].split("=").pop();
-    displayActivity(date);
+    var searchParamsId = document.location.search.split("=");
+    var searchId = searchParamsId[1].split("=").pop();
+    displayActivity(searchId);
   } else {
     // Get Search params out of the URL
     var searchParamsArr = document.location.search.split("&");
@@ -120,11 +123,11 @@ function displayName(parkName) {
   trackName.value = parkName;
 }
 
-function displayActivity(date) {
+function displayActivity(searchId) {
   var getHistory = localStorage.getItem("userHistory");
   getHistory = JSON.parse(getHistory);
   for (var i = 0; i < getHistory.length; i++) {
-    if (getHistory[i].date === date) {
+    if (getHistory[i].id == searchId) {
       trackName.value = getHistory[i].name;
       trackAddress.value = getHistory[i].address;
       activityDate.value = getHistory[i].date;
