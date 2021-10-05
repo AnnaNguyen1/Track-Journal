@@ -126,7 +126,8 @@ textarea {
   background-color: rgba(0, 0, 0, 0.6);
 }
 #edit:hover,
-#delete:hover, .home-page:hover,
+#delete:hover,
+.home-page:hover,
 .btn:hover {
   box-shadow: 0px 0px 10px var(--light-text);
 }
@@ -177,6 +178,12 @@ textarea {
   position: absolute;
   right: 5%;
   bottom: 10%;
+}
+#message {
+  display: none;
+  margin: 1rem;
+  font-size: 3rem;
+  font-family: var(--sans);
 }
 
 @media screen and (max-width: 992px) {
