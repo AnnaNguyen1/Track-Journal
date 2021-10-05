@@ -126,7 +126,7 @@ textarea {
   background-color: rgba(0, 0, 0, 0.6);
 }
 #edit:hover,
-#delete:hover. .home-page:hover,
+#delete:hover, .home-page:hover,
 .btn:hover {
   box-shadow: 0px 0px 10px var(--light-text);
 }
@@ -135,8 +135,7 @@ textarea {
 .btn,
 #edit,
 #delete {
-  margin-right: 1rem;
-  margin-top: 1rem;
+  margin: 1rem;
   padding: 1rem;
   width: 15rem;
   background-color: rgb(167, 131, 86);
@@ -178,12 +177,6 @@ textarea {
   position: absolute;
   right: 5%;
   bottom: 10%;
-}
-
-.edit-button {
-  position: relative;
-  left: 50%;
-  bottom: 5%;
 }
 
 @media screen and (max-width: 992px) {
