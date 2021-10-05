@@ -4,9 +4,6 @@ var autocompleteDiv = document.querySelector("#userLocation");
 var submitAddressSearch = document.querySelector("#searchBtn");
 var radiusInputVal = document.querySelector("#userRadius");
 var warningMessage = document.querySelector("#warning");
-// var modal = document.getElementById("myModal");
-// var btn = document.getElementById("myBtn");
-// var span = document.getElementsByClassName("close")[0];
 
 var lat = "";
 var lng = "";
@@ -48,10 +45,8 @@ function handleAddressSearch(event) {
     "./results.html?lat=" + lat + "&lng=" + lng + "&radius=" + enterRadius;
 
   if ((enterAddress = null || enterAddress == "")) {
-    //var message = "Please Enter a Valid Address and Radius";
     warningMessage.setAttribute("style", "display:block");
   } else if (enterRadius == null || enterRadius == "") {
-    // var message = "Please Enter a Valid Address and Radius";
     warningMessage.setAttribute("style", "display:block");
   } else {
     location.assign(queryString);
