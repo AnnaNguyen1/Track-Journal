@@ -1,12 +1,14 @@
 // var activitiesContainer = document.querySelector(".activities-container");
 var displayDiv = document.querySelector(".displayDiv");
 var editButton = document.querySelector("#edit");
+var displayMessage = document.querySelector("#message");
 
 function renderHistory() {
   var getHistory = localStorage.getItem("userHistory");
   getHistory = JSON.parse(getHistory);
-
-  if (getHistory !== null) {
+  if (getHistory == null || getHistory == "") {
+    displayMessage.style.display = "block";
+  } else if (getHistory !== null) {
     for (var i = 0; i < getHistory.length; i++) {
       //create divs to dipslay content
       var activitiesContainer = document.createElement("div");
