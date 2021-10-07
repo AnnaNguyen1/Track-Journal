@@ -34,16 +34,16 @@ so I can find new places I have not been before and keep track of all my activit
 ## Screenshots
 
 - The following are the screeshots of the application:
-  ![](assets\images\homepage.png)
-  ![](assets\images\homepage2.png)
-  ![](assets\images\results.png)
-  ![](assets\images\logactivity.png)
-  ![](assets\images\pastactivities.png)
+  ![](./assets/images/homepage.png)
+  ![](./assets/images/homepage2.png)
+  ![](./assets/images/results.png)
+  ![](./assets/images/logactivity.png)
+  ![](./assets/images/pastactivities.png)
 
   ## Demo
 
   - The following is the demo of the application:
-    ![](assets\images\demo.gif)
+    ![](./assets/images/demo.gif)
 
 ## Links
 
