@@ -34,11 +34,13 @@ so I can find new places I have not been before and keep track of all my activit
 ## Screenshots
 
 - The following are the screeshots of the application:
-  ![](./Assets/images/homepage.png)
-  ![](./Assets/images/homepage2.png)
-  ![](./Assets/images/results.png)
-  ![](./Assets/images/logactivity.png)
-  ![](./Assets/images/pastactivities.png)
+  ![](Assets/images/homepage.png)
+  ![](Assets/images/homepage2.png)
+  ![](Assets/images/results.png)
+  ![](Assets/images/logactivity.png)
+  ![](Assets/images/pastactivities.png)
+
+
 
   ## Demo
 
