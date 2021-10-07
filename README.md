@@ -40,9 +40,12 @@ so I can find new places I have not been before and keep track of all my activit
   ![](Assets/images/logactivity.png)
   ![](Assets/images/pastactivities.png)
 
-## Demo
 
-The following is the demo of the application: ![](Assets/images/demo.gif)
+
+  ## Demo
+
+  - The following is the demo of the application:
+    ![](./Assets/images/demo.gif)
 
 ## Links
 
