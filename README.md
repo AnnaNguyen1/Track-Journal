@@ -31,10 +31,14 @@ so I can find new places I have not been before and keep track of all my activit
 - Sam Hong - https://github.com/s-hong0125
 - Srilalitha Nookala - https://github.com/SrilalithaN
 
-## Demo
+## Screenshots
 
-- The following is a demo to the functionality of the application:
-  ![](assets/images/demo.gif)
+- The following are the screeshots of the application:
+  ![](assets/images/homepage.png)
+  ![](assets/images/homepage2.png)
+  ![](assets/images/results.png)
+  ![](assets/images/logactivity.png)
+  ![](assets/images/pastactivities.png)
 
 ## Links
 
