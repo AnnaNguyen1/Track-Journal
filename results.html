@@ -14,34 +14,35 @@
     <link rel="stylesheet" href="Assets/css/style.css" />
   </head>
 
-  <header>
-    <nav>
-      <h1 class="title">
-        <a href="homepage.html" id="title-link">TRACKING JOURNAL</a> <br />
-        <p class="subtitle">Find a track and track your activity!</p>
-      </h1>
-      <ul class="header-list">
-        <li><a href="logactivity.html">Log Activity</a></li>
-        <li><a href="pastactivities.html">View Past Activities</a></li>
-      </ul>
-    </nav>
-  </header>
-
   <body>
+    <header>
+      <nav>
+        <div>
+          <h1 class="title">
+            <a href="homepage.html" id="title-link">TRACKING JOURNAL</a> <br />
+          </h1>
+          <p class="subtitle">Find a track and track your activity!</p>
+        </div>
+        <ul class="header-list">
+          <li><a href="logactivity.html">Log Activity</a></li>
+          <li><a href="pastactivities.html">View Past Activities</a></li>
+        </ul>
+      </nav>
+    </header>
     <main id="results-main">
       <section class="header-weather-container">
-        <h2>
-          Search results for<br />
+        <div>
+          <h2>Search results for</h2>
+
           <p class="search-address">
             Address: <span id="address-searched"></span>
           </p>
-        </h2>
+        </div>
         <h2 class="weather"><span id="weather-result"></span></h2>
-        <p class="search-again">
-          <button type="button" class="home-page btn brown-border">
-            Search Again
-          </button>
-        </p>
+
+        <button type="button" class="home-page btn brown-border search-again">
+          Search Again
+        </button>
       </section>
       <!-- Container for the results to append to -->
       <section class="results-container"></section>

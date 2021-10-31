@@ -5,10 +5,7 @@
   --sans: "Open Sans", sans-serif;
 }
 
-* {
-  margin: 0px;
-  padding: 0px;
-}
+
 
 html {
   font-size: 62.5%;
@@ -18,9 +15,9 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-image: url("../images/walkingtrack.jpg");
+  /* background-image: url("../images/walkingtrack.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100%; */
   color: var(--light-text);
   font-family: var(--poppins);
   padding: 6rem;

@@ -11,10 +11,8 @@ var APIKey = "3e55dd6b578b0ad05e1279f3847fb34a";
 var weatherUpdate = document.querySelector("#weather-result");
 
 function getParams() {
-  // Get Search params out of the URL
   var searchParamsArr = document.location.search.split("&");
 
-  // Get the query and format values
   var lat = searchParamsArr[0].split("=").pop();
   var lng = searchParamsArr[1].split("=").pop();
   var radius = searchParamsArr[2].split("=").pop();
@@ -22,7 +20,7 @@ function getParams() {
 
   searchApi(lat, lng, radius);
   displayAddress(lat, lng);
-  //calling the function to display current weather
+
   getWeather(lat, lng);
 }
 
@@ -125,7 +123,7 @@ function getWeather(lat, lng) {
     })
     .then(function (response) {
       var currentWeather = document.createElement("div");
-      currentWeather.setAttribute("class", "weather");
+      currentWeather.setAttribute("class", "weather-display");
 
       var temp = document.createElement("p");
       temp.textContent = "Temperature: " + response.current.temp + "\u00B0C";

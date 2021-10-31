@@ -5,23 +5,19 @@
   --dark-bg: rgb(0, 0, 0, 0.6);
 }
 
-* {
-  margin: 0px;
-  padding: 0px;
-}
-
 html {
   font-size: 62.5%;
   color: white;
+}
+
+main {
+  color: var(--light-text);
 }
 
 nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  /* background-image: url("../images/walking.jpg");
-  background-repeat: no-repeat; */
-  background-size: 100%;
   color: var(--light-text);
   font-family: var(--poppins);
   padding: 6rem;
@@ -114,10 +110,19 @@ textarea {
   font-size: 1.5rem;
   text-align: left;
 }
-
+.search-address {
+  font-size: 2rem;
+  font-weight: bold;
+}
 #address-searched {
   text-shadow: 0.2rem 0.1rem 0.2rem grey;
 }
+/* .weather {
+  padding: 2rem;
+  color: var(--light-text);
+  border-radius: 1rem;
+  background-color: rgba(0, 0, 0, 0.6);
+} */
 
 .brown-border,
 #edit,
@@ -130,21 +135,6 @@ textarea {
 .home-page:hover,
 .btn:hover {
   box-shadow: 0px 0px 10px var(--light-text);
-}
-
-.home-page,
-.btn,
-#edit,
-#delete {
-  margin: 1rem;
-  padding: 1rem;
-  width: 15rem;
-  background-color: rgb(167, 131, 86);
-  color: white;
-  border-radius: 5rem;
-  cursor: pointer;
-  border: solid var(--light-text);
-  font-size: 1.5rem;
 }
 
 .results-container {
@@ -186,6 +176,151 @@ textarea {
   font-family: var(--sans);
 }
 
+#logActivityTitle {
+  text-align: center;
+  margin-bottom: 0;
+  font-family: "Sacramento", cursive;
+  font-size: 7rem;
+  color: var(--light-text);
+}
+.form-info {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(0, 0, 0, 0.6);
+  background-origin: border-box;
+  width: 50%;
+  margin-bottom: 5rem;
+  padding: 3rem;
+  font-family: var(--poppins);
+  color: var(--light-text);
+  font-weight: bold;
+  font-size: 1.8rem;
+  border-radius: 1.5rem;
+  box-shadow: 0px 0px 10px var(--light-text);
+  opacity: 90%;
+}
+
+input,
+select {
+  padding: 1rem;
+  width: 60%;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  border: solid var(--light-text);
+  font-family: var(--sans);
+}
+
+option {
+  background: silver;
+}
+
+#error {
+  display: none;
+  margin: 1rem;
+}
+
+#comment {
+  width: 90%;
+  border-radius: 1rem;
+  padding: 2rem;
+  font-family: var(--sans);
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: solid var(--light-text);
+}
+
+#quote {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 5rem;
+  font-family: "Sacramento", cursive;
+}
+h3 {
+  text-align: center;
+  font-family: var(--poppins);
+  font-size: 2rem;
+  font-style: italic;
+}
+form h2 {
+  text-align: center;
+  font-family: "Sacramento", cursive;
+  font-size: 3rem;
+}
+
+.userForm {
+  font-family: var(--poppins);
+  font-size: 1.5rem;
+  color: var(--light-text);
+  font-weight: bold;
+  margin-top: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  width: 40%;
+  background-color: var(--dark-bg);
+  background-origin: border-box;
+  background-position: top;
+  border-radius: 1.5rem;
+  box-shadow: 0px 0px 1rem var(--light-text);
+  padding: 1rem;
+  opacity: 90%;
+}
+.userInput {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+#searchBtn,
+.home-page,
+.btn,
+#edit,
+#delete,
+.form-info button,
+.weather {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 3rem;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  width: max-content;
+  border-radius: 1.5rem;
+  border: solid var(--light-text);
+  color: var(--light-text);
+  background-color: rgb(167, 131, 86);
+}
+/* .weather {
+  border-radius: 1.5rem;
+  border: solid var(--light-text);
+  color: var(--light-text);
+  background-color: rgb(167, 131, 86);
+} */
+#userLocation,
+#userRadius {
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  border-radius: 0.5rem;
+  border: solid var(--light-text);
+  width: 40rem;
+}
+#userRadius {
+  width: min-content;
+}
+#searchBtn:hover,
+.form-info button:hover,
+#edit:hover,
+#delete:hover,
+.home-page:hover,
+.btn:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 10px var(--light-text);
+}
+#warning {
+  display: none;
+  margin: 1rem;
+  color: var(--light-text);
+}
+
 @media screen and (max-width: 992px) {
   .header-weather-container {
     font-size: 1.2rem;
@@ -204,7 +339,6 @@ textarea {
     width: 80%;
   }
 }
-
 @media screen and (max-width: 926px) {
   nav {
     padding: 2rem;
@@ -223,5 +357,79 @@ textarea {
   }
   .activities-container {
     width: 80%;
+  }
+}
+@media screen and (max-width: 1224px) {
+  body {
+    background-size: auto;
+  }
+}
+
+@media screen and (max-width: 668px) {
+  nav {
+    justify-content: space-around;
+  }
+  .title,
+  .subtitle {
+    text-align: center;
+  }
+  #logActivityTitle {
+    font-size: 6rem;
+  }
+  input,
+  select {
+    width: 90%;
+  }
+  .form-info button {
+    width: 10rem;
+  }
+}
+
+@media screen and (max-width: 1224px) {
+  body {
+    background-size: auto;
+  }
+  #userLocation {
+    width: 35rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    background-size: auto;
+  }
+  #userLocation {
+    width: 30rem;
+  }
+  #quote {
+    font-size: 4rem;
+  }
+  #author {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    padding: 2rem;
+  }
+  .header-list {
+    font-size: 1.5rem;
+  }
+  #userLocation {
+    width: 20rem;
+  }
+  .userForm {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 668px) {
+  nav {
+    justify-content: space-around;
+  }
+  .title,
+  .subtitle {
+    text-align: center;
   }
 }
