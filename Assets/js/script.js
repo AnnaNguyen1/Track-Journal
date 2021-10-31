@@ -19,6 +19,9 @@ function getQuote() {
       var displayAuthor = data[randomI].author;
       quoteAuthor.textContent = displayAuthor;
       quote.textContent = displayQuote;
+    })
+    .catch(function(err){
+      console.log(err);
     });
 }
 getQuote();

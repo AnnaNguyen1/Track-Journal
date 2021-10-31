@@ -111,6 +111,9 @@ function displayAddress(lat, lng) {
     })
     .then(function (results) {
       renderAddress(results);
+    })
+    .catch(function (err) {
+      console.log(err);
     });
 }
 

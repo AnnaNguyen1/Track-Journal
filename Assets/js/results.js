@@ -47,6 +47,9 @@ function searchApi(lat, lng, radius) {
     })
     .then(function (results) {
       renderResults(results);
+    })
+    .catch(function (err) {
+      console.log(err);
     });
 }
 
@@ -68,6 +71,9 @@ function displayAddress(lat, lng) {
     })
     .then(function (results) {
       renderAddress(results);
+    })
+    .catch(function (err) {
+      console.log(err);
     });
 }
 
@@ -136,6 +142,9 @@ function getWeather(lat, lng) {
       currentWeather.appendChild(weatherIcon);
 
       weatherUpdate.append(currentWeather);
+    })
+    .catch(function (err) {
+      console.log(err);
     });
 }
 
